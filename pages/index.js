@@ -2,7 +2,6 @@ import Head from 'next/head';
 import { ColorModeScript } from '@chakra-ui/react';
 import Header from '../sections/header';
 import Hero from '../sections/hero';
-import Hero2 from '../sections/hero2';
 import About from '../sections/about';
 import How from '../sections/how';
 import Stats from '../sections/stats';
