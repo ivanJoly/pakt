@@ -1,5 +1,18 @@
 import { extendTheme, theme as base } from '@chakra-ui/react';
 
+import { accordionAnatomy } from '@chakra-ui/anatomy';
+import { createMultiStyleConfigHelpers } from '@chakra-ui/react';
+
+const { definePartsStyle, defineMultiStyleConfig } = createMultiStyleConfigHelpers(accordionAnatomy.keys);
+
+const baseStyle = definePartsStyle({
+    container: {
+        borderColor: 'rgb(255 255 255 / 10%)',
+    },
+});
+
+export const accordionTheme = defineMultiStyleConfig({ baseStyle });
+
 export const theme = extendTheme({
     initialColorMode: 'dark',
     useSystemColorMode: true,
@@ -53,6 +66,7 @@ export const theme = extendTheme({
                 variant: 'base',
             },
         },
+        Accordion: accordionTheme,
     },
     colors: {
         main: {
@@ -72,7 +86,7 @@ export const theme = extendTheme({
         body: `Inter, ${base.fonts?.body}`,
     },
     textStyles: {
-        subtitle: {
+        base: {
             lineHeight: '32px',
             letterSpacing: '0.1px',
             fontWeight: '300',
@@ -85,11 +99,9 @@ export const theme = extendTheme({
             borderColor: 'gray.500',
         },
         glass: {
-            background: 'rgba(255, 255, 255, 0.2)',
-            borderRadius: '16px',
-            boxShadow: '0 4px 30px rgba(0, 0, 0, 0.1)',
-            backdropFilter: 'blur(5px)',
-            border: '1px solid rgba(255, 255, 255, 0.3)',
+            background: 'linear-gradient(153.32deg, rgba(160, 158, 255, 0.3) -65.62%, rgba(153, 150, 255, 0.19375) 13.48%, rgba(146, 143, 255, 0.1) 83.28%)',
+            boxShadow: '0px 3.77132px 22.6279px -0.942829px rgba(0, 0, 0, 0.2)',
+            backdropFilter: 'blur(6px)',
         },
         sphere: {
             width: '500px',
@@ -101,7 +113,7 @@ export const theme = extendTheme({
             transform: 'translate(-50%, -50%)',
             borderRadius: '50%',
             zIndex: '1',
-            opacity: '0.3',
+            opacity: '0.15',
         },
     },
     styles: {

@@ -1,14 +1,18 @@
 import Head from 'next/head';
 import { ColorModeScript } from '@chakra-ui/react';
+import { theme } from '../styles/theme';
 import Header from '../sections/header';
 import Hero from '../sections/hero';
 import About from '../sections/about';
 import How from '../sections/how';
 import Stats from '../sections/stats';
-import { theme } from '../styles/theme';
 import Feedback from '../sections/feedback';
 import Competition from '../sections/competition';
 import SetUs from '../sections/set_us';
+import ContactUs from '../sections/contact';
+import Work from '../sections/work';
+import Faq from '../sections/faq';
+import Footer from '../sections/footer';
 
 export default function Home() {
     return (
@@ -29,6 +33,10 @@ export default function Home() {
                 <Feedback />
                 <Competition />
                 <SetUs />
+                <ContactUs />
+                <Work />
+                <Faq />
+                <Footer />
             </main>
         </>
     );

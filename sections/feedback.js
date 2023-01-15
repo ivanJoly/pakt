@@ -22,15 +22,15 @@ export default function Feedback() {
                             <Box height={'45px'}>
                                 <Image alt={'Hero Image'} fit={'contain'} align={'left'} w={'100%'} h={'100%'} src={'./boat.svg'} />
                             </Box>
-                            <Text textStyle={'subtitle'} fontWeight={'bold'} fontSize={'larger'}>
+                            <Text textStyle={'base'} fontWeight={'bold'} fontSize={'larger'}>
                                 “We love Pakt because it really helps us to manage our progress more efficiently, as well as making sure that we are ahead of schedule in the development process.”
                             </Text>
                             <Box>
-                                <Text as={'span'} textStyle={'subtitle'} fontWeight={'bolder'}>
+                                <Text as={'span'} textStyle={'base'} fontWeight={'bolder'}>
                                     Name Surname
                                 </Text>
                                 {' - '}
-                                <Text as={'span'} textStyle={'subtitle'} fontStyle={'italic'}>
+                                <Text as={'span'} textStyle={'base'} fontStyle={'italic'}>
                                     Open Sea Founder
                                 </Text>
                             </Box>
@@ -41,16 +41,16 @@ export default function Feedback() {
                             <Box height={'45px'}>
                                 <Image alt={'Hero Image'} fit={'contain'} align={'left'} w={'100%'} h={'100%'} src={'./boat.svg'} />
                             </Box>
-                            <Text textStyle={'subtitle'} fontWeight={'bold'} fontSize={'larger'}>
+                            <Text textStyle={'base'} fontWeight={'bold'} fontSize={'larger'}>
                                 ““We love Pakt because it really helps us to manage our progress more efficiently, as well as making sure that we are ahead of schedule in the development process.” All
                                 base UI elements are made using Nested Symbols”
                             </Text>
                             <Box>
-                                <Text as={'span'} textStyle={'subtitle'} fontWeight={'bolder'}>
+                                <Text as={'span'} textStyle={'base'} fontWeight={'bolder'}>
                                     Name Surname
                                 </Text>
                                 {' - '}
-                                <Text as={'span'} textStyle={'subtitle'} fontStyle={'italic'}>
+                                <Text as={'span'} textStyle={'base'} fontStyle={'italic'}>
                                     Open Sea Founder
                                 </Text>
                             </Box>
