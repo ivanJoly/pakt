@@ -103,6 +103,7 @@ export const theme = extendTheme({
             boxShadow: '0px 3.77132px 22.6279px -0.942829px rgba(0, 0, 0, 0.2)',
             backdropFilter: 'blur(6px)',
         },
+        heroGlassCard: {},
         sphere: {
             width: '500px',
             height: '500px',

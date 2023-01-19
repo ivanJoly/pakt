@@ -9,7 +9,7 @@ export default function Header() {
                     <Image alt={'Pakt Logo'} fit={'fill'} align={'center'} w={'100%'} h={'100%'} src={'/pakt_iso.svg'} boxSize="65px" />
                 </Flex>
                 <Flex gap={2}>
-                    <Button size="sm" variant="outline">
+                    <Button display={{ base: 'none', md: 'block' }} size="sm" variant="outline">
                         LAUNCH APP
                     </Button>
                     <Button size="sm">GET IN TOUCH</Button>
