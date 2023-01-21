@@ -1,12 +1,12 @@
-import { Container, Stack, Flex, Box, Heading, Text, Image, Button } from '@chakra-ui/react';
-import GlassCard from '../components/glassCard';
+import { Container, Stack, Flex, Box, Heading, Text, Image } from '@chakra-ui/react';
+import InfoCard from '../components/infoCard';
 
 export default function SetUs() {
     return (
         <Container maxW="container.xl">
             <Stack spacing={{ base: 8, md: 10 }} py={{ base: 20, md: 28 }}>
                 <Stack direction={{ base: 'column', md: 'row' }} gap={{ base: 8, md: 0 }}>
-                    <Stack flex={'0 1 50%'} spacing={{ base: 5, md: 10 }}>
+                    <Stack flex={{ base: 1, md: '0 1 75%', lg: '0 1 50%' }} spacing={{ base: 5, md: 10 }}>
                         <Box color={'brand.tertiary'} display={'flex'} gap={4}>
                             <Text as={'span'}>_WHAT SETS US APART</Text>
                         </Box>
@@ -16,77 +16,17 @@ export default function SetUs() {
                             </Text>
                             <br />
                         </Heading>
-                        <Stack gap={4} paddingLeft={20}>
+                        <Stack gap={{ base: 12, sm: 8 }} paddingLeft={{ base: 0, md: 20 }}>
                             <Text as={'span'} textStyle={'base'}>
                                 The platform works by providing an automated code review system that focuses on changelog rather than code while also manually inspecting each line of code for errors.
                             </Text>
-                            <Flex gap={12} alignItems={'center'}>
-                                <GlassCard width={'100px'} height={'80px'} position={'relative'} zIndex={2}>
-                                    <Box
-                                        width={'inherit'}
-                                        height={'inherit'}
-                                        position={'relative'}
-                                        overflow={'hidden'}
-                                        borderRadius={4}
-                                        display={'flex'}
-                                        flexDirection={'column'}
-                                        alignItems={'center'}
-                                        justifyContent={'center'}
-                                        padding={4}
-                                    >
-                                        <Box textAlign={'center'}>
-                                            <Box position={'relative'} height={'50px'} width={'full'} overflow={'hidden'}>
-                                                <Image alt={'Hero Image'} fit={'contain'} align={'center'} w={'100%'} h={'100%'} src={'./safe_retrieval.svg'} />
-                                            </Box>
-                                        </Box>
-                                    </Box>
-                                </GlassCard>
-                                <Stack flex={1} gap={1}>
-                                    <Heading lineHeight={1.1} fontWeight={600} fontSize={{ base: 'sm', sm: 'md', lg: 'lg' }} spacing={0}>
-                                        <Text as={'span'} position={'relative'}>
-                                            {'>'} Safely try things out
-                                        </Text>
-                                    </Heading>
-                                    <Text as={'span'} textStyle={'base'}>
-                                        safely test out and evaluate protocol changes before officially deploying them
-                                    </Text>
-                                </Stack>
-                            </Flex>
-                            <Flex gap={12} alignItems={'center'}>
-                                <GlassCard width={'100px'} height={'80px'} position={'relative'} zIndex={2}>
-                                    <Box
-                                        width={'inherit'}
-                                        height={'inherit'}
-                                        position={'relative'}
-                                        overflow={'hidden'}
-                                        borderRadius={4}
-                                        display={'flex'}
-                                        flexDirection={'column'}
-                                        alignItems={'center'}
-                                        justifyContent={'center'}
-                                        padding={4}
-                                    >
-                                        <Box textAlign={'center'}>
-                                            <Box position={'relative'} height={'50px'} width={'full'} overflow={'hidden'}>
-                                                <Image alt={'Hero Image'} fit={'contain'} align={'center'} w={'100%'} h={'100%'} src={'./code_check.svg'} />
-                                            </Box>
-                                        </Box>
-                                    </Box>
-                                </GlassCard>
-                                <Stack flex={1} gap={1}>
-                                    <Heading lineHeight={1.1} fontWeight={600} fontSize={{ base: 'sm', sm: 'md', lg: 'lg' }} spacing={0}>
-                                        <Text as={'span'} position={'relative'}>
-                                            {'>'} Easier to audit
-                                        </Text>
-                                    </Heading>
-                                    <Text as={'span'} textStyle={'base'}>
-                                        easier to audit protocol changes by providing an automated review system
-                                    </Text>
-                                </Stack>
+                            <Flex direction={'column'} gap={12} alignItems={'center'} maxW={600}>
+                                <InfoCard title={'> Safely try things out'} description={'safely test out and evaluate protocol changes before officially deploying them'} image={'safe_retrieval'} />
+                                <InfoCard title={'> Easier to audit'} description={'easier to audit protocol changes by providing an automated review system.'} image={'code_check'} />
                             </Flex>
                         </Stack>
                     </Stack>
-                    <Flex flex={'0 1 50%'} justify={'center'} align={'flex-start'} position={'relative'} w={'full'}>
+                    <Flex display={{ base: 'none', sm: 'block' }} flex={'0 1 50%'} justify={'center'} align={'flex-start'} position={'relative'} w={'full'}>
                         <Box position={'relative'} height={'300px'} rounded={'2xl'} boxShadow={'2xl'} width={'full'} overflow={'hidden'}>
                             <Image alt={'Hero Image'} fit={'contain'} align={'center'} w={'100%'} h={'100%'} src={'./set_us_vector.svg'} />
                         </Box>

@@ -14,8 +14,8 @@ export default function Work() {
                     </Text>
                     <br />
                 </Heading>
-                <Grid position={'relative'} padding={32} gap={8} gridTemplateColumns={'repeat(4, 1fr)'} gridTemplateRows={'repeat(3, 1fr)'} columnGap={6} rowGap={6}>
-                    <Box width={'full'} height={'150px'} gridArea={'1 / 1 / 2 / 3'}>
+                <Grid position={'relative'} padding={{ base: 2, md: 8, lg: 20, xl: 32 }} gap={8} gridTemplateColumns={'repeat(12, 1fr)'} gridTemplateRows={'repeat(3, 1fr)'} columnGap={6} rowGap={6}>
+                    <Box width={'full'} height={'150px'} gridArea={{ base: '1 / 1 / 2 / 13', md: '1 / 1 / 2 / 9', lg: '1 / 1 / 2 / 7' }}>
                         <Stack>
                             <Heading as="h5" size="lg" fontWeight={600}>
                                 Whitehat hackers prepare!
@@ -25,9 +25,24 @@ export default function Work() {
                             </Text>
                         </Stack>
                     </Box>
-                    <Box width={'full'} height={'320px'} alignSelf={'self-end'} gridArea={'1 / 4 / 3 / 5'}>
+                    <Box
+                        width={'full'}
+                        height={{ base: 'full', md: '320px' }}
+                        maxW={{ base: 'inherit', md: '250px' }}
+                        justifySelf={'start'}
+                        alignSelf={{ base: 'center', lg: 'self-end' }}
+                        gridArea={{ base: '2 / 1 / 3 / 12', md: '2 / 9 / 4 / 13', lg: '1 / 9 / 3 / 13', xl: '1 / 10 / 3 / 13' }}
+                    >
                         <Box position={'relative'} height={'inherit'}>
-                            <GlassCard width={'150px'} height={'125px'} position={'absolute'} top={'-5%'} left={'50%'} transform={'translateX(-50%)'} zIndex={2}>
+                            <GlassCard
+                                width={{ base: '80px', md: '150px' }}
+                                height={{ base: '80px', md: '120px' }}
+                                position={'absolute'}
+                                top={{ base: '50%', md: '-5%' }}
+                                left={{ base: '100%', md: '50%' }}
+                                transform={{ base: 'translate(-50%, -50%)', md: 'translateX(-50%)' }}
+                                zIndex={2}
+                            >
                                 <Box
                                     width={'inherit'}
                                     height={'inherit'}
@@ -47,19 +62,19 @@ export default function Work() {
                                     </Box>
                                 </Box>
                             </GlassCard>
-                            <GlassCard width={'full'} height={'full'}>
-                                <Box
+                            <GlassCard width={'full'} height={'full'} padding={2}>
+                                <Flex
                                     width={'inherit'}
                                     height={'inherit'}
                                     position={'relative'}
                                     overflow={'hidden'}
                                     display={'flex'}
-                                    flexDirection={'column'}
+                                    flexDirection={{ base: 'row', md: 'column' }}
                                     alignItems={'center'}
-                                    justifyContent={'flex-end'}
+                                    justifyContent={{ base: 'flex-start', md: 'flex-end' }}
                                     padding={4}
                                 >
-                                    <Stack textAlign={'center'} gap={1}>
+                                    <Stack flex={{ base: '0 1 75%', md: 0 }} textAlign={{ base: '', md: 'center' }} gap={1}>
                                         <Heading as="h6" size="sm" fontWeight={600}>
                                             Better pay than the rest
                                         </Heading>
@@ -67,13 +82,26 @@ export default function Work() {
                                             PAKT offers better pay, for you to focus on providing quality work and secure protocols.
                                         </Text>
                                     </Stack>
-                                </Box>
+                                </Flex>
                             </GlassCard>
                         </Box>
                     </Box>
-                    <Box width={'full'} height={'180px'} gridArea={'2 / 2 / 3 / 4'} transform={'translateY(-10px)'}>
-                        <Box flex={'0 1 50%'} height={'inherit'} position={'relative'}>
-                            <GlassCard width={'150px'} height={'120px'} position={'absolute'} top={'10%'} left={'5%'} transform={'translateX(-50%)'} zIndex={3}>
+                    <Box
+                        width={'full'}
+                        height={{ base: '100%', md: '180px' }}
+                        gridArea={{ base: '3 / 2 / 4 / 13', md: '2 / 2 / 3 / 9', lg: '2 / 3 / 3 / 9', xl: '2 / 4 / 3 / 10' }}
+                        transform={{ base: '', md: 'translateY(-10px)' }}
+                    >
+                        <Box height={'inherit'} position={'relative'}>
+                            <GlassCard
+                                width={{ base: '80px', md: '150px' }}
+                                height={{ base: '80px', md: '120px' }}
+                                position={'absolute'}
+                                top={{ base: '50%', md: '10%' }}
+                                left={{ base: '2%', md: '2%' }}
+                                transform={{ base: 'translate(-50%, -50%)', md: 'translateX(-50%)' }}
+                                zIndex={3}
+                            >
                                 <Box
                                     width={'inherit'}
                                     height={'inherit'}
@@ -93,23 +121,23 @@ export default function Work() {
                                     </Box>
                                 </Box>
                             </GlassCard>
-                            <GlassCard width={'full'} height={'full'} position={'relative'} zIndex={2}>
-                                <Flex direction={'row'} height={'inherit'}>
-                                    <Box flex={'0 1 25%'}></Box>
-                                    <Stack flex={'0 1 75%'} justifyContent={'center'} paddingRight={12}>
+                            <GlassCard width={'full'} height={'full'} position={'relative'} zIndex={2} padding={2}>
+                                <Flex direction={'row'} height={'inherit'} padding={4}>
+                                    <Box flex={{ base: '0 1 50px', md: '0 1 25%' }}></Box>
+                                    <Stack flex={{ base: '0 1 100%', md: '0 1 75%' }} justifyContent={'center'} paddingRight={{ base: 0, lg: 4, xl: 12 }}>
                                         <Heading as="h5" size="sm" fontWeight={600}>
                                             Save users from theft
                                         </Heading>
                                         <Text as={'span'} textStyle={'base'} fontSize={'sm'}>
-                                            Help protect users' funds at risk. Our rigorous automated review system provides an extra layer of security.
+                                            {`Help protect users' funds at risk. Our rigorous automated review system provides an extra layer of security.`}
                                         </Text>
                                     </Stack>
                                 </Flex>
                             </GlassCard>
                         </Box>
                     </Box>
-                    <Box width={'full'} height={'180px'} gridArea={'3 / 1 / 4 / 3'}>
-                        <Stack height={'full'} justifyContent={'flex-end'} alignItems={'flex-start'} gap={4}>
+                    <Box width={'full'} height={'180px'} gridArea={{ base: '5 / 1 / 6 / 12', md: '4 / 1 / 5 / 6', lg: '3 / 1 / 4 / 6' }}>
+                        <Stack height={'full'} justifyContent={{ base: 'center', lg: 'flex-end' }} alignItems={'flex-start'} gap={4}>
                             <Flex gap={2} alignItems={'center'}>
                                 <Box height={'15px'}>
                                     <Image alt={'Hero Image'} fit={'contain'} align={'center'} w={'100%'} h={'100%'} src={'./email.svg'} />
@@ -126,9 +154,17 @@ export default function Work() {
                             </Box>
                         </Stack>
                     </Box>
-                    <Box width={'full'} height={'180px'} gridArea={'3 / 3 / 4 / 5'}>
-                        <Box flex={'0 1 50%'} height={'inherit'} position={'relative'}>
-                            <GlassCard width={'150px'} height={'120px'} position={'absolute'} top={'10%'} left={'95%'} transform={'translateX(-50%)'} zIndex={3}>
+                    <Box width={'full'} height={{ base: '100%', md: '180px' }} gridArea={{ base: '4 / 1 / 5 / 12', md: '3 / 1 / 4 / 8', lg: '3 / 6 / 4 / 12', xl: '3 / 6 / 4 / 12' }}>
+                        <Box height={'inherit'} position={'relative'}>
+                            <GlassCard
+                                width={{ base: '80px', md: '150px' }}
+                                height={{ base: '80px', md: '120px' }}
+                                position={'absolute'}
+                                top={{ base: '50%', md: '10%' }}
+                                left={{ base: '100%', md: '95%' }}
+                                transform={{ base: 'translate(-50%, -50%)', md: 'translateX(-50%)' }}
+                                zIndex={3}
+                            >
                                 <Box
                                     width={'inherit'}
                                     height={'inherit'}
@@ -148,9 +184,9 @@ export default function Work() {
                                     </Box>
                                 </Box>
                             </GlassCard>
-                            <GlassCard width={'full'} height={'full'} position={'relative'} zIndex={2}>
-                                <Flex direction={'row'} height={'inherit'}>
-                                    <Stack flex={'0 1 75%'} justifyContent={'center'} paddingLeft={12}>
+                            <GlassCard width={'full'} height={'full'} position={'relative'} zIndex={2} padding={2}>
+                                <Flex direction={'row'} height={'inherit'} padding={4}>
+                                    <Stack flex={'0 1 75%'} justifyContent={'center'}>
                                         <Heading as="h5" size="sm" fontWeight={600}>
                                             Work on an innovative company
                                         </Heading>

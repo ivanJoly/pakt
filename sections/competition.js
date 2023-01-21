@@ -1,10 +1,59 @@
 import { Container, Stack, Flex, Box, Heading, Text, Image } from '@chakra-ui/react';
 import GlassCard from '../components/glassCard';
 
+const OTHER_SERVICES = ['Lack of funds protections throughout the process', 'Slow response time', 'No hard checking of the code', 'Lack of rigorous review'];
+const PAKT_SERVICES = ['Comprehensive code audit', 'Protection of funds at risk at any time', 'Rigorous review of every line of code', 'Manual inspection for malicious intent', 'Focus on changelog'];
+
+const IconCardCompetition = ({ image }) => {
+    return (
+        <Box position={'relative'} overflow={'hidden'} borderRadius={4} display={'flex'} flexDirection={'column'} alignItems={'center'} justifyContent={'center'} padding={4}>
+            <Box textAlign={'center'}>
+                <Box position={'relative'} height={'80px'} width={'full'} overflow={'hidden'}>
+                    <Image alt={'Hero Image'} fit={'contain'} align={'center'} w={'100%'} h={'100%'} src={`./${image}.svg`} />
+                </Box>
+            </Box>
+        </Box>
+    );
+};
+
+const HeaderCard = ({ title, description }) => {
+    return (
+        <>
+            <Box height={20}></Box>
+            <Heading flex={0} as="h5" size="lg" fontWeight={600}>
+                {title}
+            </Heading>
+            <Text as={'span'} textStyle={'base'} flex={0}>
+                {description}
+            </Text>
+        </>
+    );
+};
+
+const StackItem = ({ items, icon = 'X' }) => {
+    return (
+        <Stack gap={0}>
+            {items.map((item, index) => {
+                return (
+                    <Flex key={`${item}-${index}`} align={'center'} justifyContent={'center'} gap={4}>
+                        <Text as={'span'} flex={0}>
+                            {icon}
+                        </Text>
+                        <Text flex={1} as={'span'} textStyle={'base'} fontSize={'sm'} lineHeight={1.8}>
+                            {item}
+                        </Text>
+                    </Flex>
+                );
+            })}
+        </Stack>
+    );
+};
+
 export default function Competition() {
     return (
         <Container maxW="container.xl">
             <Stack spacing={{ base: 8, md: 10 }} py={{ base: 20, md: 28 }}>
+                {/* SECTION HEADER */}
                 <Box color={'brand.tertiary'} display={'flex'} gap={4}>
                     <Text as={'span'}>_OUR COMPETITION</Text>
                 </Box>
@@ -18,155 +67,42 @@ export default function Competition() {
                         </Heading>
                     </Stack>
                     <Stack flex={'0 1 50%'} justify={'flex-start'} align={'flex-start'}>
-                        <Text as={'span'} textStyle={'base'} paddingRight={32}>
+                        <Text as={'span'} textStyle={'base'} paddingRight={{ base: 0, lg: 24, xl: 32 }}>
                             In the Ethereum security landscape, there are many competitors vying for the same market, while they all provide valuable services, none can match Pakt's comprehensive
                             approach when it comes to protecting smart contracts and protocols on Ethereum.
                         </Text>
                     </Stack>
                 </Stack>
-                <Flex padding={32} gap={8}>
+                {/* SECTION CARDS */}
+                <Flex direction={{ base: 'column', md: 'row' }} padding={{ base: 0, sm: 8, lg: 24, xl: 32 }} gap={{ base: 32, md: 8 }}>
                     <Box flex={'0 1 50%'} position={'relative'} transform={'translateY(50px)'}>
                         <GlassCard width={'150px'} height={'120px'} position={'absolute'} top={'-5%'} left={'30%'} transform={'translateX(-50%)'} zIndex={3}>
-                            <Box
-                                width={'inherit'}
-                                height={'inherit'}
-                                position={'relative'}
-                                overflow={'hidden'}
-                                borderRadius={4}
-                                display={'flex'}
-                                flexDirection={'column'}
-                                alignItems={'center'}
-                                justifyContent={'center'}
-                                padding={4}
-                            >
-                                <Box textAlign={'center'}>
-                                    <Box position={'relative'} height={'80px'} width={'full'} overflow={'hidden'}>
-                                        <Image alt={'Hero Image'} fit={'contain'} align={'center'} w={'100%'} h={'100%'} src={'./rack_server.svg'} />
-                                    </Box>
-                                </Box>
-                            </Box>
+                            <IconCardCompetition image={'rack_server'} />
                         </GlassCard>
                         <GlassCard width={'full'} height={'full'} position={'relative'} zIndex={2}>
-                            <Box padding={12}>
+                            <Box padding={{ base: 8, lg: 12 }}>
                                 <Stack gap={4}>
-                                    <Box height={20}></Box>
-                                    <Heading flex={0} as="h5" size="lg" fontWeight={600}>
-                                        Other Services
-                                    </Heading>
-                                    <Text as={'span'} textStyle={'base'} flex={0}>
-                                        Competitors don't have as much security when it comes to Ethereum code audits, so they are more likely to make mistakes.
-                                    </Text>
-                                    <Stack gap={0} flex={0}>
-                                        <Flex align={'center'} justifyContent={'center'} gap={4}>
-                                            <Text as={'span'} flex={0}>
-                                                X
-                                            </Text>
-                                            <Text flex={1} as={'span'} textStyle={'base'} fontSize={'sm'}>
-                                                Lack of funds protections throughout the process
-                                            </Text>
-                                        </Flex>
-                                        <Flex align={'center'} justifyContent={'center'} gap={4}>
-                                            <Text as={'span'} flex={0}>
-                                                X
-                                            </Text>
-                                            <Text flex={1} as={'span'} textStyle={'base'} fontSize={'sm'}>
-                                                Slow response time
-                                            </Text>
-                                        </Flex>
-                                        <Flex align={'center'} justifyContent={'center'} gap={4}>
-                                            <Text as={'span'} flex={0}>
-                                                X
-                                            </Text>
-                                            <Text flex={1} as={'span'} textStyle={'base'} fontSize={'sm'}>
-                                                No hard checking of the code
-                                            </Text>
-                                        </Flex>
-                                        <Flex align={'center'} justifyContent={'center'} gap={4}>
-                                            <Text as={'span'} flex={0}>
-                                                X
-                                            </Text>
-                                            <Text flex={1} as={'span'} textStyle={'base'} fontSize={'sm'}>
-                                                Lack of rigorous review
-                                            </Text>
-                                        </Flex>
-                                    </Stack>
+                                    <HeaderCard
+                                        title={'Other Services'}
+                                        description={`Competitors don't have as much security when it comes to Ethereum code audits, so they are more likely to make mistakes.`}
+                                    />
+                                    <StackItem items={PAKT_SERVICES} />
                                 </Stack>
                             </Box>
                         </GlassCard>
                     </Box>
                     <Box flex={'0 1 50%'} position={'relative'}>
                         <GlassCard width={'150px'} height={'120px'} position={'absolute'} top={'-5%'} left={'30%'} transform={'translateX(-50%)'} zIndex={3}>
-                            <Box
-                                width={'inherit'}
-                                height={'inherit'}
-                                position={'relative'}
-                                overflow={'hidden'}
-                                borderRadius={4}
-                                display={'flex'}
-                                flexDirection={'column'}
-                                alignItems={'center'}
-                                justifyContent={'center'}
-                                padding={4}
-                            >
-                                <Box textAlign={'center'}>
-                                    <Box position={'relative'} height={'80px'} width={'full'} overflow={'hidden'}>
-                                        <Image alt={'Hero Image'} fit={'contain'} align={'center'} w={'100%'} h={'100%'} src={'./house.svg'} />
-                                    </Box>
-                                </Box>
-                            </Box>
+                            <IconCardCompetition image={'house'} />
                         </GlassCard>
                         <GlassCard width={'full'} height={'full'} position={'relative'} zIndex={2}>
-                            <Box padding={12}>
+                            <Box padding={{ base: 8, lg: 12 }}>
                                 <Stack gap={4}>
-                                    <Box height={20}></Box>
-                                    <Heading as="h5" size="lg" fontWeight={600}>
-                                        Pakt Servicies
-                                    </Heading>
-                                    <Text as={'span'} textStyle={'base'}>
-                                        We provide a comprehensive approach that goes beyond the standard code audit, providing a more rigorous and thorough process.
-                                    </Text>
-                                    <Stack gap={0}>
-                                        <Flex align={'center'} justifyContent={'center'} gap={4}>
-                                            <Text as={'span'} flex={0}>
-                                                X
-                                            </Text>
-                                            <Text flex={1} as={'span'} textStyle={'base'} fontSize={'sm'}>
-                                                Comprehensive code audit
-                                            </Text>
-                                        </Flex>
-                                        <Flex align={'center'} justifyContent={'center'} gap={4}>
-                                            <Text as={'span'} flex={0}>
-                                                X
-                                            </Text>
-                                            <Text flex={1} as={'span'} textStyle={'base'} fontSize={'sm'}>
-                                                Protection of funds at risk at any time
-                                            </Text>
-                                        </Flex>
-                                        <Flex align={'center'} justifyContent={'center'} gap={4}>
-                                            <Text as={'span'} flex={0}>
-                                                X
-                                            </Text>
-                                            <Text flex={1} as={'span'} textStyle={'base'} fontSize={'sm'}>
-                                                Rigorous review of every line of code
-                                            </Text>
-                                        </Flex>
-                                        <Flex align={'center'} justifyContent={'center'} gap={4}>
-                                            <Text as={'span'} flex={0}>
-                                                X
-                                            </Text>
-                                            <Text flex={1} as={'span'} textStyle={'base'} fontSize={'sm'}>
-                                                Manual inspection for malicious intent
-                                            </Text>
-                                        </Flex>
-                                        <Flex align={'center'} justifyContent={'center'} gap={4}>
-                                            <Text as={'span'} flex={0}>
-                                                X
-                                            </Text>
-                                            <Text flex={1} as={'span'} textStyle={'base'} fontSize={'sm'}>
-                                                Focus on changelog
-                                            </Text>
-                                        </Flex>
-                                    </Stack>
+                                    <HeaderCard
+                                        title={'Pakt Servicies'}
+                                        description={`We provide a comprehensive approach that goes beyond the standard code audit, providing a more rigorous and thorough process.`}
+                                    />
+                                    <StackItem items={OTHER_SERVICES} />
                                 </Stack>
                             </Box>
                         </GlassCard>

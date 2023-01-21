@@ -1,10 +1,9 @@
-import { Container, Stack, Flex, Box, Heading, Text, Image, Button, Grid, Accordion, AccordionItem, AccordionButton, AccordionIcon, AccordionPanel } from '@chakra-ui/react';
-import GlassCard from '../components/glassCard';
+import { Container, Stack, Flex, Box, Heading, Text, Accordion, AccordionItem, AccordionButton, AccordionIcon, AccordionPanel } from '@chakra-ui/react';
 
 export default function Faq() {
     return (
-        <Container maxW="container.xl">
-            <Stack spacing={{ base: 8, md: 10 }}>
+        <Container maxW="container.xl" py={{ base: 20, md: 28 }}>
+            <Stack spacing={{ base: 8, md: 10 }} py={{ base: 16 }}>
                 <Box color={'brand.tertiary'} display={'flex'} gap={4}>
                     <Text as={'span'}>_QUESTIONS</Text>
                 </Box>
@@ -14,8 +13,8 @@ export default function Faq() {
                     </Text>
                 </Heading>
             </Stack>
-            <Flex padding={32}>
-                <Box flex={'0 1 50%'}>
+            <Flex direction={{ base: 'column', lg: 'row' }} paddingX={{ base: 0, lg: 18, xl: 32 }} gap={16}>
+                <Box flex={{ base: 1, lg: '0 1 50%' }}>
                     <Stack gap={4}>
                         <Heading as="h5" size="lg" fontWeight={600}>
                             Have any more questions?
@@ -59,7 +58,7 @@ export default function Faq() {
                         </Accordion>
                     </Stack>
                 </Box>
-                <Flex flex={'0 1 50%'} paddingLeft={20} alignItems={'flex-end'}>
+                <Flex flex={{ base: 1, lg: '0 1 50%' }} paddingLeft={{ base: 0, lg: 20 }} alignItems={'flex-end'}>
                     <Stack>
                         <Heading as="h5" size="lg" fontWeight={600}>
                             Want to chat?
