@@ -1,17 +1,9 @@
 import { extendTheme, theme as base } from '@chakra-ui/react';
-
-import { accordionAnatomy } from '@chakra-ui/anatomy';
-import { createMultiStyleConfigHelpers } from '@chakra-ui/react';
-
-const { definePartsStyle, defineMultiStyleConfig } = createMultiStyleConfigHelpers(accordionAnatomy.keys);
-
-const baseStyle = definePartsStyle({
-    container: {
-        borderColor: 'rgb(255 255 255 / 10%)',
-    },
-});
-
-export const accordionTheme = defineMultiStyleConfig({ baseStyle });
+import { textareaTheme } from './textArea';
+import { inputTheme } from './input';
+import { formTheme } from './form';
+import { accordionTheme } from './accordion';
+import { menuTheme } from './menu';
 
 export const theme = extendTheme({
     initialColorMode: 'dark',
@@ -67,6 +59,10 @@ export const theme = extendTheme({
             },
         },
         Accordion: accordionTheme,
+        Textarea: textareaTheme,
+        Input: inputTheme,
+        Form: formTheme,
+        Menu: menuTheme,
     },
     colors: {
         main: {
@@ -79,6 +75,11 @@ export const theme = extendTheme({
             secondary: '#49B7B1',
             tertiary: '#A7F0B7',
             fourth: '#0F1B51',
+        },
+        selectBG: {
+            foreground: '#0d0d0d',
+            500: '#191818',
+            300: '#191818',
         },
     },
     fonts: {
