@@ -36,9 +36,9 @@ const StackItem = ({ items, icon = 'X' }) => {
             {items.map((item, index) => {
                 return (
                     <Flex key={`${item}-${index}`} align={'center'} justifyContent={'center'} gap={4}>
-                        <Text as={'span'} flex={0}>
-                            {icon}
-                        </Text>
+                        <Box display={'inline-block'} marginBottom={'-4px'} marginRight={2} position={'relative'} height={'20px'} width={'20px'}>
+                            <Image alt={`${icon}`} fit={'contain'} align={'center'} w={'100%'} h={'100%'} src={`./${icon}.svg`} />
+                        </Box>
                         <Text flex={1} as={'span'} textStyle={'base'} fontSize={'sm'} lineHeight={1.8}>
                             {item}
                         </Text>
@@ -86,7 +86,7 @@ export default function Competition() {
                                         title={'Other Services'}
                                         description={`Competitors don't have as much security when it comes to Ethereum code audits, so they are more likely to make mistakes.`}
                                     />
-                                    <StackItem items={PAKT_SERVICES} />
+                                    <StackItem items={PAKT_SERVICES} icon={`across-social`} />
                                 </Stack>
                             </Box>
                         </GlassCard>
@@ -102,7 +102,7 @@ export default function Competition() {
                                         title={'Pakt Servicies'}
                                         description={`We provide a comprehensive approach that goes beyond the standard code audit, providing a more rigorous and thorough process.`}
                                     />
-                                    <StackItem items={OTHER_SERVICES} />
+                                    <StackItem items={OTHER_SERVICES} icon={`check-icon`} />
                                 </Stack>
                             </Box>
                         </GlassCard>

@@ -16,7 +16,7 @@ export default function Feedback() {
                         <br />
                     </Heading>
                 </Stack>
-                <Stack gap={16} padding={{ base: 4, sm: 16, md: 8, lg: 32 }}>
+                <Stack gap={32} padding={{ base: 4, sm: 16, md: 8, lg: 32 }}>
                     <Flex alignItems={'center'} direction={{ base: 'column', md: 'row' }} gap={{ base: 16 }}>
                         <Flex order={{ base: 0 }} flex={'0 1 50%'} position={'relative'} justifyContent={'center'} height={220} width={'100%'} maxW={450}>
                             <Box position={'relative'} margin={{ base: 0, md: 4 }} width={'inherit'} height={'inherit'}>
@@ -49,6 +49,9 @@ export default function Feedback() {
                                 “We love Pakt because it really helps us to manage our progress more efficiently, as well as making sure that we are ahead of schedule in the development process.”
                             </Text>
                             <Box>
+                                <Box display={'inline-block'} marginBottom={'-4px'} marginRight={2} position={'relative'} height={'20px'} width={'20px'}>
+                                    <Image alt={'person-outline'} fit={'contain'} align={'center'} w={'100%'} h={'100%'} src={`./person-outline.svg`} />
+                                </Box>
                                 <Text as={'span'} textStyle={'base'} fontWeight={'bolder'}>
                                     Name Surname
                                 </Text>
@@ -69,6 +72,9 @@ export default function Feedback() {
                                 base UI elements are made using Nested Symbols”
                             </Text>
                             <Box>
+                                <Box display={'inline-block'} marginBottom={'-4px'} marginRight={2} position={'relative'} height={'20px'} width={'20px'}>
+                                    <Image alt={'person-outline'} fit={'contain'} align={'center'} w={'100%'} h={'100%'} src={`./person-outline.svg`} />
+                                </Box>
                                 <Text as={'span'} textStyle={'base'} fontWeight={'bolder'}>
                                     Name Surname
                                 </Text>

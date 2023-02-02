@@ -33,12 +33,19 @@ export const theme = extendTheme({
                 },
             },
             variants: {
-                // Make a variant, we'll call it `base` here and leave it empty
-                base: {
-                    // color: 'red',
-                },
+                base: {},
                 secondary: {
-                    //...define other variants
+                    backgroundColor: '#A7F0B7',
+                    color: '#020207',
+                    _hover: {
+                        backgroundColor: '#A7F0B7cc',
+                    },
+                    _active: {
+                        backgroundColor: '#A7F0B7cc',
+                    },
+                    _disabled: {
+                        background: '#A7F0B7cc',
+                    },
                 },
                 outline: {
                     backgroundColor: 'transparent',
@@ -51,6 +58,22 @@ export const theme = extendTheme({
                     },
                     _disabled: {
                         background: '#d7d7d730',
+                    },
+                },
+                light: {
+                    backgroundColor: '#FFFFFF',
+                    color: '#020207',
+                    _hover: {
+                        backgroundColor: '#d7d7d730',
+                        color: '#FFFFFF',
+                    },
+                    _active: {
+                        backgroundColor: '#d7d7d730',
+                        color: '#FFFFFF',
+                    },
+                    _disabled: {
+                        background: '#d7d7d730',
+                        color: '#FFFFFF',
                     },
                 },
             },
@@ -69,6 +92,7 @@ export const theme = extendTheme({
             primary: '#FFFFFF',
             secondary: '#FBFBFB',
             background: '#020207',
+            foreground: 'rgba(255, 255, 255, 0.2)',
         },
         brand: {
             primary: '#2E56ff',

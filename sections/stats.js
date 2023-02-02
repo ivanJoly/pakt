@@ -1,4 +1,4 @@
-import { Container, Stack, Flex, Box, Heading, Text, Image, Button, Grid } from '@chakra-ui/react';
+import { Container, Stack, Box, Heading, Text, Grid } from '@chakra-ui/react';
 import GlassCard from '../components/glassCard';
 
 export default function Stats() {
@@ -28,7 +28,7 @@ export default function Stats() {
                             <Text as={'span'} textStyle={'base'}>
                                 Stolen
                             </Text>
-                            <Heading as="h5" size="xl" fontWeight={600}>
+                            <Heading as="h5" size={{ base: 'lg', lg: 'xl' }} fontWeight={600}>
                                 $19,990 Millions
                             </Heading>
                         </Stack>
@@ -47,7 +47,7 @@ export default function Stats() {
                             <Text as={'span'} textStyle={'base'}>
                                 Vulnerabilities <br /> in each project
                             </Text>
-                            <Heading as="h5" size="xl" fontWeight={600}>
+                            <Heading as="h5" size={{ base: 'lg', lg: 'xl' }} fontWeight={600}>
                                 445
                             </Heading>
                         </Stack>
@@ -78,7 +78,7 @@ export default function Stats() {
                             <Text as={'span'} textStyle={'base'}>
                                 Attacks
                             </Text>
-                            <Heading as="h5" size="xl" fontWeight={600}>
+                            <Heading as="h5" size={{ base: 'lg', lg: 'xl' }} fontWeight={600}>
                                 445
                             </Heading>
                         </Stack>
@@ -96,7 +96,7 @@ export default function Stats() {
                             <Text as={'span'} textStyle={'base'}>
                                 Other Numbers
                             </Text>
-                            <Heading as="h5" size="xl" fontWeight={600}>
+                            <Heading as="h5" size={{ base: 'lg', lg: 'xl' }} fontWeight={600}>
                                 445
                             </Heading>
                         </Stack>
@@ -104,8 +104,8 @@ export default function Stats() {
                 </Box>
                 <Box
                     position={'absolute'}
-                    top={'50%'}
-                    left={'30%'}
+                    top={{ base: '80%', lg: '50%' }}
+                    left={{ base: '50%', lg: '30%' }}
                     height={150}
                     width={150}
                     borderRadius={'50%'}
@@ -114,6 +114,22 @@ export default function Stats() {
                     zIndex={1}
                     opacity={'0.85'}
                 ></Box>
+                <Box
+                    position={'absolute'}
+                    top={{ base: '35%', lg: '5%' }}
+                    left={{ base: '15%', lg: '15%' }}
+                    height={75}
+                    width={75}
+                    borderRadius={'50%'}
+                    background={'linear-gradient(180deg, #126CE8 0%, rgba(18, 108, 232, 0) 100%)'}
+                    zIndex={1}
+                    opacity={'1'}
+                ></Box>
+                <Box position={'absolute'} top={'35%'} left={'50%'} zIndex={1} opacity={'0.85'}>
+                    <Text as={'span'} position={'relative'} fontSize={80}>
+                        {'<<<'}
+                    </Text>
+                </Box>
             </Grid>
         </Container>
     );

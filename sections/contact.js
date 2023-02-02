@@ -1,6 +1,18 @@
 import { useForm } from 'react-hook-form';
 import { Container, Stack, Flex, Box, Heading, Text, Button, FormErrorMessage, FormLabel, FormControl, Input, Textarea, Image } from '@chakra-ui/react';
 import { Select } from 'chakra-react-select';
+import EmailClipboard from '../components/emailClipboard';
+
+const ICONS = ['gh-icon', 'telegram-icon', 'medium-icon'];
+
+const IconList = ({ image }) => {
+    return (
+        <Box display={'inline-block'} position={'relative'} height={'40px'} width={'40px'}>
+            <Image alt={`${image}`} fit={'contain'} align={'center'} w={'100%'} h={'100%'} src={`./${image}.svg`} />
+        </Box>
+    );
+};
+
 export const ContactForm = () => {
     const {
         handleSubmit,
@@ -138,18 +150,17 @@ export default function ContactUs() {
                                         Or send us an email
                                     </Heading>
                                 </Flex>
-                                <Box width={'full'} height={'48px'} maxW={'350px'} background={'rgba(255, 255, 255, 0.2)'} borderRadius={'25px'}>
-                                    <Flex justifyContent={'space-between'} alignItems={'center'} height={'inherit'} paddingX={6}>
-                                        <Text textStyle={'base'}>ouremail@gmail.com</Text>
-                                        <Button bgColor={'brand.tertiary'} width={'32px'} height={'32px'}></Button>
-                                    </Flex>
-                                </Box>
+                                <EmailClipboard />
                             </Stack>
                             <Heading lineHeight={1.1} fontWeight={600} fontSize={{ base: 'md', sm: 'lg', lg: 'xl' }} spacing={0}>
                                 <Text as={'span'} position={'relative'}>
                                     More questions? Reach us
                                 </Text>
-                                <br />
+                                <Flex marginTop={6} gap={6} flexWrap={'wrap'} maxW={250}>
+                                    {ICONS.map((item) => {
+                                        return <IconList key={item} image={item} />;
+                                    })}
+                                </Flex>
                             </Heading>
                         </Stack>
                     </Stack>

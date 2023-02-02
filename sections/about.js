@@ -1,5 +1,15 @@
-import { Container, Stack, Flex, Box, Heading, Text } from '@chakra-ui/react';
+import { Container, Stack, Flex, Box, Heading, Text, Image } from '@chakra-ui/react';
 import InfoCard from '../components/infoCard';
+
+const ICONS = ['binance-icon', 'eth-icon', 'polygon-icon', '1-icon', '2-icon', '3-icon', '4-icon'];
+
+const IconList = ({ image }) => {
+    return (
+        <Box display={'inline-block'} position={'relative'} height={'40px'} width={'40px'}>
+            <Image alt={`${image}`} fit={'contain'} align={'center'} w={'100%'} h={'100%'} src={`./${image}.svg`} />
+        </Box>
+    );
+};
 
 export default function About() {
     return (
@@ -16,7 +26,7 @@ export default function About() {
                 </Heading>
                 <Flex padding={{ base: 0, sm: 8, lg: 20 }} direction={{ base: 'column', md: 'row' }} gap={{ base: 12, md: 4 }}>
                     <Flex order={{ base: 1, md: 0 }} flex={{ base: '1', md: '0 1 50%' }} paddingRight={{ base: 0, lg: 40, xl: 60 }} gap={8} flexDirection={'column'}>
-                        <Box>
+                        <Stack>
                             <Heading lineHeight={1.1} fontWeight={600} fontSize={{ base: 'md', sm: 'lg', lg: 'xl' }} spacing={0}>
                                 <Text as={'span'} position={'relative'}>
                                     Want to dive deeper?
@@ -26,17 +36,26 @@ export default function About() {
                             <Text as={'span'} textStyle={'base'}>
                                 You can explore our documentation on Github
                             </Text>
-                            <br />
-                            <Text color={'brand.tertiary'} as={'span'}>
-                                Access Documentation
-                            </Text>
-                        </Box>
+                            <Box>
+                                <Box display={'inline-block'} marginBottom={'-4px'} position={'relative'} height={'20px'} width={'20px'}>
+                                    <Image alt={'subdirectory-arrow-right'} fit={'contain'} align={'center'} w={'100%'} h={'100%'} src={`./baseline-subdirectory-arrow-right.svg`} />
+                                </Box>
+                                <Text color={'brand.tertiary'} as={'span'} marginLeft={2} textDecoration={'underline'}>
+                                    Access Documentation
+                                </Text>
+                            </Box>
+                        </Stack>
                         <Box>
                             <Heading lineHeight={1.1} fontWeight={600} fontSize={{ base: 'md', sm: 'lg', lg: 'xl' }} spacing={0}>
                                 <Text as={'span'} position={'relative'}>
                                     Chain availability
                                 </Text>
                             </Heading>
+                            <Flex marginTop={6} gap={6} flexWrap={'wrap'} maxW={250}>
+                                {ICONS.map((item) => {
+                                    return <IconList key={item} image={item} />;
+                                })}
+                            </Flex>
                         </Box>
                     </Flex>
                     <Flex order={{ base: 0, md: 1 }} flex={{ base: '1', md: '0 1 50%' }} flexDirection={'column'} paddingRight={{ base: 0, xl: 12 }} gap={8}>

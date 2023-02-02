@@ -1,4 +1,14 @@
-import { Container, Stack, Flex, Box, Heading, Text, Accordion, AccordionItem, AccordionButton, AccordionIcon, AccordionPanel } from '@chakra-ui/react';
+import { Container, Stack, Flex, Box, Heading, Text, Accordion, AccordionItem, AccordionButton, AccordionIcon, AccordionPanel, Image } from '@chakra-ui/react';
+
+const ICONS = ['gh-icon', 'telegram-icon', 'medium-icon'];
+
+const IconList = ({ image }) => {
+    return (
+        <Box display={'inline-block'} position={'relative'} height={'40px'} width={'40px'}>
+            <Image alt={`${image}`} fit={'contain'} align={'center'} w={'100%'} h={'100%'} src={`./${image}.svg`} />
+        </Box>
+    );
+};
 
 export default function Faq() {
     return (
@@ -59,13 +69,18 @@ export default function Faq() {
                     </Stack>
                 </Box>
                 <Flex flex={{ base: 1, lg: '0 1 50%' }} paddingLeft={{ base: 0, lg: 20 }} alignItems={'flex-end'}>
-                    <Stack>
+                    <Stack gap={4}>
                         <Heading as="h5" size="lg" fontWeight={600}>
                             Want to chat?
                         </Heading>
                         <Text as={'span'} textStyle={'base'}>
                             Follow us on social media to stay up-to-date on the latest PAKT’s news
                         </Text>
+                        <Flex marginTop={6} gap={6} flexWrap={'wrap'} maxW={250}>
+                            {ICONS.map((item) => {
+                                return <IconList key={item} image={item} />;
+                            })}
+                        </Flex>
                     </Stack>
                 </Flex>
             </Flex>

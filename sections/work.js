@@ -1,5 +1,6 @@
 import { Container, Stack, Flex, Box, Heading, Text, Image, Button, Grid } from '@chakra-ui/react';
 import GlassCard from '../components/glassCard';
+import EmailClipboard from '../components/emailClipboard';
 
 export default function Work() {
     return (
@@ -56,8 +57,8 @@ export default function Work() {
                                     padding={4}
                                 >
                                     <Box textAlign={'center'}>
-                                        <Box position={'relative'} height={'50px'} width={'full'} overflow={'hidden'}>
-                                            <Image alt={'Hero Image'} fit={'contain'} align={'center'} w={'100%'} h={'100%'} src={'./chart_network.svg'} />
+                                        <Box position={'relative'} height={'80px'} width={'full'} overflow={'hidden'}>
+                                            <Image alt={'Hero Image'} fit={'contain'} align={'center'} w={'100%'} h={'100%'} src={'./flash-payment.svg'} />
                                         </Box>
                                     </Box>
                                 </Box>
@@ -116,7 +117,7 @@ export default function Work() {
                                 >
                                     <Box textAlign={'center'}>
                                         <Box position={'relative'} height={'80px'} width={'full'} overflow={'hidden'}>
-                                            <Image alt={'Hero Image'} fit={'contain'} align={'center'} w={'100%'} h={'100%'} src={'./house.svg'} />
+                                            <Image alt={'Hero Image'} fit={'contain'} align={'center'} w={'100%'} h={'100%'} src={'./axis-lock.svg'} />
                                         </Box>
                                     </Box>
                                 </Box>
@@ -146,12 +147,7 @@ export default function Work() {
                                     Or send us an email
                                 </Heading>
                             </Flex>
-                            <Box width={'full'} height={'48px'} maxW={'350px'} background={'rgba(255, 255, 255, 0.2)'} borderRadius={'25px'}>
-                                <Flex justifyContent={'space-between'} alignItems={'center'} height={'inherit'} paddingX={6}>
-                                    <Text textStyle={'base'}>ouremail@gmail.com</Text>
-                                    <Button bgColor={'brand.tertiary'} width={'32px'} height={'32px'}></Button>
-                                </Flex>
-                            </Box>
+                            <EmailClipboard />
                         </Stack>
                     </Box>
                     <Box width={'full'} height={{ base: '100%', md: '180px' }} gridArea={{ base: '4 / 1 / 5 / 12', md: '3 / 1 / 4 / 8', lg: '3 / 6 / 4 / 12', xl: '3 / 6 / 4 / 12' }}>
@@ -179,7 +175,7 @@ export default function Work() {
                                 >
                                     <Box textAlign={'center'}>
                                         <Box position={'relative'} height={'80px'} width={'full'} overflow={'hidden'}>
-                                            <Image alt={'Hero Image'} fit={'contain'} align={'center'} w={'100%'} h={'100%'} src={'./house.svg'} />
+                                            <Image alt={'Hero Image'} fit={'contain'} align={'center'} w={'100%'} h={'100%'} src={'./request-create.svg'} />
                                         </Box>
                                     </Box>
                                 </Box>
