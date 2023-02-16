@@ -54,8 +54,6 @@ const LottieControl = ({ scroll }) => {
             const maxFrames = anim.totalFrames;
             const frame = Math.round((scrollPosition * maxFrames) / 100);
 
-            console.log(frame, maxFrames, scroll);
-
             anim.goToAndStop(frame, true);
         }
 
