@@ -11,6 +11,7 @@ const CopyButton = ({ icon }) => {
 
 const EmailClipboard = ({ fistText = 'ouremail@gmail.com', secondText = 'Text copy to clipboard' }) => {
     const [active, setActive] = React.useState(false);
+    let holdTimeOut = 0;
 
     const onClipboard = () => {
         if (active) return;
@@ -18,9 +19,15 @@ const EmailClipboard = ({ fistText = 'ouremail@gmail.com', secondText = 'Text co
         setActive(true);
         navigator.clipboard.writeText(fistText);
 
-        setTimeout(() => {
+        holdTimeOut = setTimeout(() => {
             setActive(false);
+            clearTime(holdTimeOut);
         }, 2000);
+    };
+
+    const clearTime = (holdTimeOut) => {
+        clearTimeout(holdTimeOut);
+        holdTimeOut = 0;
     };
 
     return (
