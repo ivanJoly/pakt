@@ -61,10 +61,11 @@ export const ContactForm = () => {
                     />
                     <FormErrorMessage>{errors.mail && errors.mail.message}</FormErrorMessage>
                 </FormControl>
-                <FormControl isInvalid={errors.reason}>
-                    <FormLabel htmlFor="reason">Reason to contact us</FormLabel>
+                <FormControl id="react-select-reason-input" isInvalid={errors.reason}>
+                    <FormLabel htmlFor="react-select-reason-input">Reason to contact us</FormLabel>
                     <Select
                         id="reason"
+                        instanceId="reason"
                         selectedOptionColor="selectBG"
                         options={[
                             {
