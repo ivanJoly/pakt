@@ -67,6 +67,7 @@ const LottieControl = ({ scroll }) => {
     return (
         <Box
             position={{ base: 'relative', sm: 'absolute' }}
+            pointerEvents={'none'}
             maxW={'500px'}
             backgroundColor={'main.background'}
             left={{ base: 0, sm: '4%' }}
