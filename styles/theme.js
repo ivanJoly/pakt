@@ -4,83 +4,13 @@ import { inputTheme } from './input';
 import { formTheme } from './form';
 import { accordionTheme } from './accordion';
 import { menuTheme } from './menu';
+import { buttonTheme } from './button';
 
 export const theme = extendTheme({
     initialColorMode: 'dark',
     useSystemColorMode: true,
     components: {
-        Button: {
-            baseStyle: {
-                background: '#2E56ff',
-                color: '#FFFFFF',
-                borderRadius: 50,
-                lineHeight: 1,
-                _hover: {
-                    background: '#0031FF',
-                },
-                _active: {
-                    background: '#0031FF',
-                },
-                _disabled: {
-                    background: 'rgba(46, 86, 255, 0.3)',
-                },
-            },
-            sizes: {
-                sm: {
-                    h: '40px',
-                    fontSize: 'xs',
-                    px: '40px',
-                },
-            },
-            variants: {
-                base: {},
-                secondary: {
-                    backgroundColor: '#A7F0B7',
-                    color: '#020207',
-                    _hover: {
-                        backgroundColor: '#A7F0B7cc',
-                    },
-                    _active: {
-                        backgroundColor: '#A7F0B7cc',
-                    },
-                    _disabled: {
-                        background: '#A7F0B7cc',
-                    },
-                },
-                outline: {
-                    backgroundColor: 'transparent',
-                    color: '#FFFFFF',
-                    _hover: {
-                        backgroundColor: '#d7d7d730',
-                    },
-                    _active: {
-                        backgroundColor: '#d7d7d730',
-                    },
-                    _disabled: {
-                        background: '#d7d7d730',
-                    },
-                },
-                light: {
-                    backgroundColor: '#FFFFFF',
-                    color: '#020207',
-                    _hover: {
-                        backgroundColor: '#d7d7d730',
-                        color: '#FFFFFF',
-                    },
-                    _active: {
-                        backgroundColor: '#d7d7d730',
-                        color: '#FFFFFF',
-                    },
-                    _disabled: {
-                        background: '#d7d7d730',
-                        color: '#FFFFFF',
-                    },
-                },
-            },
-            defaultProps: {
-                variant: 'base',
-            },
-        },
+        Button: buttonTheme,
         Accordion: accordionTheme,
         Textarea: textareaTheme,
         Input: inputTheme,
