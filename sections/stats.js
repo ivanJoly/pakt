@@ -24,7 +24,7 @@ export default function Stats() {
                     gridArea={{ base: '2 / 1 / 3 / 13', sm: '2 / 2 / 3 / 12', md: '2 / 2 / 3 / 7', lg: '1 / 1 / 1 / 6', xl: '1 / 2 / 2 / 7' }}
                 >
                     <GlassCard width={'full'} height={'full'}>
-                        <Stack alignItems={'center'} justifyContent={'center'} height={'full'}>
+                        <Stack alignItems={'center'} justifyContent={'center'} height={'full'} position={'relative'} zIndex={2}>
                             <Text as={'span'} textStyle={'base'}>
                                 Stolen
                             </Text>
@@ -32,6 +32,42 @@ export default function Stats() {
                                 $19,990 Millions
                             </Heading>
                         </Stack>
+                        <Box
+                            position={'absolute'}
+                            top={{ base: '10%', lg: '10%' }}
+                            left={{ base: '15%', lg: '15%' }}
+                            height={120}
+                            width={120}
+                            borderRadius={'50%'}
+                            filter={'blur(20px)'}
+                            background={'linear-gradient(0deg, #0125D5, #0125D5), linear-gradient(0deg, #0125D5, #0125D5), linear-gradient(0deg, #0125D5, #0125D5), #0125D5;'}
+                            zIndex={1}
+                            opacity={'0.4'}
+                        ></Box>
+                        <Box
+                            position={'absolute'}
+                            top={{ base: '15%', lg: '15%' }}
+                            left={{ base: '20%', lg: '20%' }}
+                            height={120}
+                            width={120}
+                            borderRadius={'50%'}
+                            filter={'blur(20px)'}
+                            background={'#002CAA'}
+                            zIndex={1}
+                            opacity={'0.4'}
+                        ></Box>
+                        <Box
+                            position={'absolute'}
+                            top={{ base: '50%', lg: '50%' }}
+                            left={{ base: '65%', lg: '65%' }}
+                            height={70}
+                            width={70}
+                            borderRadius={'50%'}
+                            filter={'blur(20px)'}
+                            background={'linear-gradient(0deg, #0125D5, #0125D5), linear-gradient(0deg, #0125D5, #0125D5), linear-gradient(0deg, #0125D5, #0125D5), #0125D5;'}
+                            zIndex={1}
+                            opacity={'0.4'}
+                        ></Box>
                     </GlassCard>
                 </Box>
                 <Box
@@ -43,7 +79,7 @@ export default function Stats() {
                     transform={'translateY(32px)'}
                 >
                     <GlassCard width={'full'} height={'full'} position={'relative'} zIndex={2}>
-                        <Stack alignItems={'center'} justifyContent={'center'} height={'full'}>
+                        <Stack alignItems={'center'} justifyContent={'center'} height={'full'} position={'relative'} zIndex={2}>
                             <Text as={'span'} textStyle={'base'}>
                                 Vulnerabilities <br /> in each project
                             </Text>
@@ -51,6 +87,30 @@ export default function Stats() {
                                 445
                             </Heading>
                         </Stack>
+                        <Box
+                            position={'absolute'}
+                            top={{ base: '10%', lg: '10%' }}
+                            left={{ base: '5%', lg: '5%' }}
+                            height={150}
+                            width={150}
+                            borderRadius={'50%'}
+                            filter={'blur(15px)'}
+                            background={'linear-gradient(56.29deg, #79F0A9 17.45%, rgba(1, 37, 213, 0) 70%);'}
+                            zIndex={1}
+                            opacity={'0.55'}
+                        ></Box>
+                        <Box
+                            position={'absolute'}
+                            top={{ base: '5%', lg: '5%' }}
+                            left={{ base: '45%', lg: '45%' }}
+                            height={95}
+                            width={140}
+                            borderRadius={'50%'}
+                            filter={'blur(10px)'}
+                            background={'linear-gradient(233.33deg, #002CAA 9.17%, rgba(0, 44, 170, 0) 81.88%);'}
+                            zIndex={1}
+                            opacity={'0.65'}
+                        ></Box>
                     </GlassCard>
                 </Box>
                 <Box
@@ -92,7 +152,7 @@ export default function Stats() {
                     gridArea={{ base: '4 / 1 / 5 / 13', sm: '4 / 2 / 5 / 12', md: '3 / 7 / 3 / 12', lg: '2 / 6 / 3 / 10', xl: '2 / 7 / 3 / 11' }}
                 >
                     <GlassCard width={'full'} height={'full'} position={'relative'} zIndex={2}>
-                        <Stack alignItems={'center'} justifyContent={'center'} height={'full'}>
+                        <Stack alignItems={'center'} justifyContent={'center'} height={'full'} position={'relative'} zIndex={2}>
                             <Text as={'span'} textStyle={'base'}>
                                 Other Numbers
                             </Text>
@@ -100,12 +160,36 @@ export default function Stats() {
                                 445
                             </Heading>
                         </Stack>
+                        <Box
+                            position={'absolute'}
+                            top={{ base: '0%', lg: '0%' }}
+                            left={{ base: '5%', lg: '5%' }}
+                            height={95}
+                            width={120}
+                            borderRadius={'50%'}
+                            filter={'blur(20px)'}
+                            background={'linear-gradient(322.15deg, #0125D5 17.94%, rgba(18, 108, 232, 0) 150.77%);'}
+                            zIndex={1}
+                            opacity={'0.75'}
+                        ></Box>
+                        <Box
+                            position={'absolute'}
+                            top={{ base: '50%', lg: '50%' }}
+                            left={{ base: '65%', lg: '60%' }}
+                            height={95}
+                            width={120}
+                            borderRadius={'50%'}
+                            filter={'blur(20px)'}
+                            background={'linear-gradient(322.15deg, #0125D5 17.94%, rgba(18, 108, 232, 0) 150.77%);'}
+                            zIndex={1}
+                            opacity={'0.75'}
+                        ></Box>
                     </GlassCard>
                 </Box>
                 <Box
                     position={'absolute'}
-                    top={{ base: '80%', lg: '50%' }}
-                    left={{ base: '50%', lg: '30%' }}
+                    top={{ base: '60%', md: '80%', lg: '70%' }}
+                    left={{ base: '15%', md: '25%', lg: '45%' }}
                     height={150}
                     width={150}
                     borderRadius={'50%'}
@@ -116,8 +200,8 @@ export default function Stats() {
                 ></Box>
                 <Box
                     position={'absolute'}
-                    top={{ base: '35%', lg: '5%' }}
-                    left={{ base: '15%', lg: '15%' }}
+                    top={{ base: '45%', lg: '45%' }}
+                    left={{ base: '40%', lg: '35%' }}
                     height={75}
                     width={75}
                     borderRadius={'50%'}
