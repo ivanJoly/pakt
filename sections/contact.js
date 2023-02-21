@@ -1,15 +1,32 @@
 import { useForm } from 'react-hook-form';
-import { Container, Stack, Flex, Box, Heading, Text, Button, FormErrorMessage, FormLabel, FormControl, Input, Textarea, Image } from '@chakra-ui/react';
+import { Container, Stack, Flex, Box, Heading, Text, Button, FormErrorMessage, FormLabel, FormControl, Input, Textarea, Image, Link, IconButton } from '@chakra-ui/react';
 import { Select } from 'chakra-react-select';
+import { Icon } from '@iconify/react';
 import EmailClipboard from '../components/emailClipboard';
 
-const ICONS = ['gh-icon', 'telegram-icon', 'medium-icon'];
+const ICONS = [
+    {
+        id: 1,
+        icon: 'teenyicons:github-solid',
+        link: 'https://www.github.com',
+    },
+    {
+        id: 2,
+        icon: 'ph:telegram-logo',
+        link: 'https://www.github.com',
+    },
+    {
+        id: 3,
+        icon: 'ph:medium-logo',
+        link: 'https://www.github.com',
+    },
+];
 
-const IconList = ({ image }) => {
+const IconList = ({ icon, link }) => {
     return (
-        <Box display={'inline-block'} position={'relative'} height={'40px'} width={'40px'}>
-            <Image alt={`${image}`} fit={'contain'} align={'center'} w={'100%'} h={'100%'} src={`./${image}.svg`} />
-        </Box>
+        <Link href={link} isExternal>
+            <IconButton variant={'IconButtonOutlinePrimary'} size="md" icon={<Icon icon={icon} />} />
+        </Link>
     );
 };
 
@@ -110,7 +127,7 @@ export const ContactForm = () => {
 
 export default function ContactUs() {
     return (
-        <Container maxW="container.xl" py={{ base: 20, md: 28 }}>
+        <Container id="contact-form" maxW="container.xl" py={{ base: 20, md: 28 }}>
             <Stack spacing={{ base: 8, md: 10 }} py={{ base: 16 }}>
                 <Box color={'brand.tertiary'} display={'flex'} gap={4}>
                     <Text as={'span'}>_REACH OUT</Text>
@@ -121,17 +138,17 @@ export default function ContactUs() {
                     </Text>
                 </Heading>
             </Stack>
+            <Flex gap={2} alignItems={'center'} paddingX={{ base: 0, lg: 18, xl: 32 }} marginBottom={4}>
+                <Box height={'15px'}>
+                    <Image alt={'Hero Image'} fit={'contain'} align={'center'} w={'100%'} h={'100%'} src={'./pencil.svg'} />
+                </Box>
+                <Heading as="h6" size="md" fontWeight={400}>
+                    Fill up the form
+                </Heading>
+            </Flex>
             <Flex direction={{ base: 'column', lg: 'row' }} paddingX={{ base: 0, lg: 18, xl: 32 }} gap={16}>
                 <Flex flex={{ base: 1, lg: '0 1 50%' }}>
                     <Stack gap={4} width={'full'}>
-                        <Flex gap={2} alignItems={'center'}>
-                            <Box height={'15px'}>
-                                <Image alt={'Hero Image'} fit={'contain'} align={'center'} w={'100%'} h={'100%'} src={'./pencil.svg'} />
-                            </Box>
-                            <Heading as="h6" size="md" fontWeight={400}>
-                                Fill up the form
-                            </Heading>
-                        </Flex>
                         <ContactForm />
                     </Stack>
                 </Flex>
@@ -159,7 +176,7 @@ export default function ContactUs() {
                                 </Text>
                                 <Flex marginTop={6} gap={6} flexWrap={'wrap'} maxW={250}>
                                     {ICONS.map((item) => {
-                                        return <IconList key={item} image={item} />;
+                                        return <IconList key={item.id} icon={item.icon} link={item.link} />;
                                     })}
                                 </Flex>
                             </Heading>

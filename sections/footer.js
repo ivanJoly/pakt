@@ -1,12 +1,29 @@
-import { Container, Stack, Box, Image, Flex } from '@chakra-ui/react';
+import { Container, Stack, Box, Image, Flex, Link, IconButton } from '@chakra-ui/react';
+import { Icon } from '@iconify/react';
 
-const ICONS = ['gh-white', 'telegram-white', 'medium-white'];
+const ICONS = [
+    {
+        id: 1,
+        icon: 'teenyicons:github-solid',
+        link: 'https://www.github.com',
+    },
+    {
+        id: 2,
+        icon: 'ph:telegram-logo',
+        link: 'https://www.github.com',
+    },
+    {
+        id: 3,
+        icon: 'ph:medium-logo',
+        link: 'https://www.github.com',
+    },
+];
 
-const IconList = ({ image }) => {
+const IconList = ({ icon, link }) => {
     return (
-        <Box display={'inline-block'} position={'relative'} height={'40px'} width={'40px'}>
-            <Image alt={`${image}`} fit={'contain'} align={'center'} w={'100%'} h={'100%'} src={`./${image}.svg`} />
-        </Box>
+        <Link href={link} isExternal>
+            <IconButton variant={'IconButtonOutlineLight'} size="md" icon={<Icon icon={icon} />} />
+        </Link>
     );
 };
 
@@ -20,7 +37,7 @@ export default function Footer() {
                     </Box>
                     <Flex marginTop={6} gap={6} flexWrap={'wrap'} maxW={250}>
                         {ICONS.map((item) => {
-                            return <IconList key={item} image={item} />;
+                            return <IconList key={item.id} icon={item.icon} link={item.link} />;
                         })}
                     </Flex>
                 </Stack>

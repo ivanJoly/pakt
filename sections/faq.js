@@ -1,12 +1,44 @@
-import { Container, Stack, Flex, Box, Heading, Text, Accordion, AccordionItem, AccordionButton, AccordionIcon, AccordionPanel, Image } from '@chakra-ui/react';
+import { Container, Stack, Flex, Box, Heading, Text, Accordion, AccordionItem, AccordionButton, AccordionIcon, AccordionPanel, Link, IconButton } from '@chakra-ui/react';
+import { Icon } from '@iconify/react';
 
-const ICONS = ['gh-icon', 'telegram-icon', 'medium-icon'];
+const ICONS = [
+    {
+        id: 1,
+        icon: 'teenyicons:github-solid',
+        link: 'https://www.github.com',
+    },
+    {
+        id: 2,
+        icon: 'ph:telegram-logo',
+        link: 'https://www.github.com',
+    },
+    {
+        id: 3,
+        icon: 'ph:medium-logo',
+        link: 'https://www.github.com',
+    },
+];
 
-const IconList = ({ image }) => {
+const ACCORDION_ITEMS = [
+    {
+        id: 1,
+        title: 'What benefits does PAKT provide Ethereum projects?',
+        description:
+            'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
+    },
+    {
+        id: 2,
+        title: 'How secure is the code audit process ?',
+        description:
+            'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
+    },
+];
+
+const IconList = ({ icon, link }) => {
     return (
-        <Box display={'inline-block'} position={'relative'} height={'40px'} width={'40px'}>
-            <Image alt={`${image}`} fit={'contain'} align={'center'} w={'100%'} h={'100%'} src={`./${image}.svg`} />
-        </Box>
+        <Link href={link} isExternal>
+            <IconButton variant={'IconButtonOutlinePrimary'} size="md" icon={<Icon icon={icon} />} />
+        </Link>
     );
 };
 
@@ -34,37 +66,25 @@ export default function Faq() {
                             have worked on this FAQ’s
                         </Text>
                         <Accordion allowToggle>
-                            <AccordionItem>
-                                <h2>
-                                    <AccordionButton>
-                                        <Box as="span" flex="1" textAlign="left">
-                                            What benefits does PAKT provide Ethereum projects?
-                                        </Box>
-                                        <AccordionIcon />
-                                    </AccordionButton>
-                                </h2>
-                                <AccordionPanel pb={4}>
-                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
-                                    exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                                </AccordionPanel>
-                            </AccordionItem>
-
-                            <AccordionItem>
-                                <h2>
-                                    <AccordionButton>
-                                        <Box as="span" flex="1" textAlign="left">
-                                            How secure is the code audit process ?
-                                        </Box>
-                                        <AccordionIcon />
-                                    </AccordionButton>
-                                </h2>
-                                <AccordionPanel pb={4}>
-                                    <Text as={'span'} textStyle={'base'} size={'xs'}>
-                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
-                                        nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                                    </Text>
-                                </AccordionPanel>
-                            </AccordionItem>
+                            {ACCORDION_ITEMS.map((item) => {
+                                return (
+                                    <AccordionItem key={item.id}>
+                                        <h2>
+                                            <AccordionButton>
+                                                <Box as="span" flex="1" textAlign="left" paddingRight={4}>
+                                                    {item.title}
+                                                </Box>
+                                                <AccordionIcon />
+                                            </AccordionButton>
+                                        </h2>
+                                        <AccordionPanel pb={4}>
+                                            <Text as={'span'} textStyle={'base'} size={'xs'}>
+                                                {item.description}
+                                            </Text>
+                                        </AccordionPanel>
+                                    </AccordionItem>
+                                );
+                            })}
                         </Accordion>
                     </Stack>
                 </Box>
@@ -78,7 +98,7 @@ export default function Faq() {
                         </Text>
                         <Flex marginTop={6} gap={6} flexWrap={'wrap'} maxW={250}>
                             {ICONS.map((item) => {
-                                return <IconList key={item} image={item} />;
+                                return <IconList key={item.id} icon={item.icon} link={item.link} />;
                             })}
                         </Flex>
                     </Stack>
