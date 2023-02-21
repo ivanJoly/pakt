@@ -45,9 +45,14 @@ export default function Feedback() {
                             <Box height={'45px'}>
                                 <Image alt={'Hero Image'} fit={'contain'} align={'left'} w={'100%'} h={'100%'} src={'./boat.svg'} />
                             </Box>
-                            <Text textStyle={'base'} fontWeight={'bold'} fontSize={'larger'}>
-                                “We love Pakt because it really helps us to manage our progress more efficiently, as well as making sure that we are ahead of schedule in the development process.”
-                            </Text>
+                            <Box position={'relative'}>
+                                <Text textStyle={'base'} fontWeight={'bold'} fontSize={'larger'} position={'relative'} zIndex={1}>
+                                    “We love Pakt because it really helps us to manage our progress more efficiently, as well as making sure that we are ahead of schedule in the development process.”
+                                </Text>
+                                <Box display={'inline-block'} marginBottom={'-4px'} marginRight={2} position={'absolute'} top={'35%'} left={'80%'} zIndex={0} height={'75px'} width={'75px'}>
+                                    <Image alt={'person-outline'} fit={'contain'} align={'center'} w={'100%'} h={'100%'} src={`./quota.svg`} />
+                                </Box>
+                            </Box>
                             <Box>
                                 <Box display={'inline-block'} marginBottom={'-4px'} marginRight={2} position={'relative'} height={'20px'} width={'20px'}>
                                     <Image alt={'person-outline'} fit={'contain'} align={'center'} w={'100%'} h={'100%'} src={`./person-outline.svg`} />
@@ -67,10 +72,15 @@ export default function Feedback() {
                             <Box height={'45px'}>
                                 <Image alt={'Hero Image'} fit={'contain'} align={'left'} w={'100%'} h={'100%'} src={'./boat.svg'} />
                             </Box>
-                            <Text textStyle={'base'} fontWeight={'bold'} fontSize={'larger'}>
-                                ““We love Pakt because it really helps us to manage our progress more efficiently, as well as making sure that we are ahead of schedule in the development process.” All
-                                base UI elements are made using Nested Symbols”
-                            </Text>
+                            <Box position={'relative'}>
+                                <Text textStyle={'base'} fontWeight={'bold'} fontSize={'larger'} position={'relative'} zIndex={1}>
+                                    ““We love Pakt because it really helps us to manage our progress more efficiently, as well as making sure that we are ahead of schedule in the development process.”
+                                    All base UI elements are made using Nested Symbols”
+                                </Text>
+                                <Box display={'inline-block'} marginBottom={'-4px'} marginRight={2} position={'absolute'} top={'35%'} left={'80%'} zIndex={0} height={'75px'} width={'75px'}>
+                                    <Image alt={'person-outline'} fit={'contain'} align={'center'} w={'100%'} h={'100%'} src={`./quota.svg`} />
+                                </Box>
+                            </Box>
                             <Box>
                                 <Box display={'inline-block'} marginBottom={'-4px'} marginRight={2} position={'relative'} height={'20px'} width={'20px'}>
                                     <Image alt={'person-outline'} fit={'contain'} align={'center'} w={'100%'} h={'100%'} src={`./person-outline.svg`} />
