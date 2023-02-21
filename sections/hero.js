@@ -1,4 +1,4 @@
-import { Container, Stack, Flex, Box, Heading, Text, Image, Button } from '@chakra-ui/react';
+import { Container, Stack, Flex, Box, Heading, Text, Image, Button, Link } from '@chakra-ui/react';
 import GlassCard from '../components/glassCard';
 import { VectorSection } from '../components/hero/vector_section';
 
@@ -238,9 +238,9 @@ export default function Hero() {
                             <Text as={'span'} textStyle={'base'}>
                                 Helping EVM projects avoid getting hacked, and losing funds, reputation, and credibility whilst reassuring users about the safety of new protocol changes.
                             </Text>
-                            <Box>
+                            <Link href="#contact-form">
                                 <Button size="sm">GET IN TOUCH</Button>
-                            </Box>
+                            </Link>
                         </Stack>
                         <Flex order={{ base: 0, sm: 1 }} flex={'0 1 50%'} justify={'center'} align={'center'} position={'relative'} w={'full'}>
                             <VectorSection />

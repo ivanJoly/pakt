@@ -1,4 +1,4 @@
-import { Container, Flex, Button, Image } from '@chakra-ui/react';
+import { Container, Flex, Button, Image, Link } from '@chakra-ui/react';
 
 export default function Header() {
     return (
@@ -12,7 +12,9 @@ export default function Header() {
                     <Button display={{ base: 'none', md: 'block' }} size="sm" variant="outline">
                         LAUNCH APP
                     </Button>
-                    <Button size="sm">GET IN TOUCH</Button>
+                    <Link href="#contact-form">
+                        <Button size="sm">GET IN TOUCH</Button>
+                    </Link>
                 </Flex>
             </Flex>
         </Container>
