@@ -1,4 +1,4 @@
-import { Container, Stack, Flex, Box, Heading, Text, Image } from '@chakra-ui/react';
+import { Container, Stack, Flex, Box, Heading, Text, Image, Link } from '@chakra-ui/react';
 import InfoCard from '../components/infoCard';
 
 const ICONS = ['binance-icon', 'eth-icon', 'polygon-icon', '1-icon', '2-icon', '3-icon', '4-icon'];
@@ -40,9 +40,11 @@ export default function About() {
                                 <Box display={'inline-block'} marginBottom={'-4px'} position={'relative'} height={'20px'} width={'20px'}>
                                     <Image alt={'subdirectory-arrow-right'} fit={'contain'} align={'center'} w={'100%'} h={'100%'} src={`./baseline-subdirectory-arrow-right.svg`} />
                                 </Box>
-                                <Text color={'brand.tertiary'} as={'span'} marginLeft={2} textDecoration={'underline'}>
-                                    Access Documentation
-                                </Text>
+                                <Link>
+                                    <Text color={'brand.tertiary'} as={'span'} marginLeft={2} textDecoration={'underline'}>
+                                        Access Documentation
+                                    </Text>
+                                </Link>
                             </Box>
                         </Stack>
                         <Box>
