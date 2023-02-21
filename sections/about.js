@@ -64,8 +64,48 @@ export default function About() {
                                 We fix your mistakes before they become a problem for your users, to assure them and you that the change that you are introducing does not cause any unnecessary issues.
                             </Text>
                         </Box>
-                        <InfoCard title={'> Efficient'} description={'Our services are designed to provide impressive results quickly and efficiently.'} image={'efficient'} />
-                        <InfoCard title={'> Cheap'} description={`We strive to provide cost-effective services that meet our customer's needs without breaking the bank`} image={'cheap'} />
+                        <InfoCard title={'> Efficient'} description={'Our services are designed to provide impressive results quickly and efficiently.'} image={'efficient'} rotate={-10}>
+                            {/* Misc Background; */}
+                            <Box
+                                position={'absolute'}
+                                top={{ base: '15%', lg: '15%' }}
+                                left={{ base: '15%', lg: '15%' }}
+                                height={140}
+                                width={200}
+                                filter={'blur(20px)'}
+                                background={'rgba(1, 37, 213, 0.5)'}
+                                zIndex={1}
+                                opacity={'0.75'}
+                                transform={'rotate(-50deg)'}
+                            ></Box>
+                        </InfoCard>
+                        <InfoCard title={'> Cheap'} description={`We strive to provide cost-effective services that meet our customer's needs without breaking the bank`} image={'cheap'} rotate={10}>
+                            {/* Misc Background; */}
+                            <Box
+                                position={'absolute'}
+                                top={{ base: '5%', lg: '5%' }}
+                                left={{ base: '15%', lg: '15%' }}
+                                height={135}
+                                width={135}
+                                borderRadius={'50%'}
+                                filter={'blur(25px)'}
+                                background={'#2E56FF'}
+                                zIndex={1}
+                                opacity={'0.65'}
+                            ></Box>
+                            <Box
+                                position={'absolute'}
+                                top={{ base: '80%', lg: '35%' }}
+                                left={{ base: '50%', lg: '45%' }}
+                                height={95}
+                                width={95}
+                                borderRadius={'50%'}
+                                filter={'blur(25px)'}
+                                background={'#A7F0B7'}
+                                zIndex={0}
+                                opacity={'0.55'}
+                            ></Box>
+                        </InfoCard>
                     </Flex>
                 </Flex>
             </Stack>
