@@ -1,4 +1,4 @@
-import { Container, Stack, Flex, Box, Heading, Text, Image, Button, Grid } from '@chakra-ui/react';
+import { Container, Stack, Flex, Box, Heading, Text, Image, Grid } from '@chakra-ui/react';
 import GlassCard from '../components/glassCard';
 import EmailClipboard from '../components/emailClipboard';
 
@@ -144,10 +144,10 @@ export default function Work() {
                                     <Image alt={'Hero Image'} fit={'contain'} align={'center'} w={'100%'} h={'100%'} src={'./email.svg'} />
                                 </Box>
                                 <Heading as="h6" size="sm" fontWeight={400}>
-                                    Or send us an email
+                                    Or send us an email to apply
                                 </Heading>
                             </Flex>
-                            <EmailClipboard />
+                            <EmailClipboard fistText={'hire@upgradehub.com'} />
                         </Stack>
                     </Box>
                     <Box width={'full'} height={{ base: '100%', md: '180px' }} gridArea={{ base: '4 / 1 / 5 / 12', md: '3 / 1 / 4 / 8', lg: '3 / 6 / 4 / 12', xl: '3 / 6 / 4 / 12' }}>
