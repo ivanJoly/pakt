@@ -126,7 +126,7 @@ export default function ContactUs() {
                     <Stack gap={4} width={'full'}>
                         <Flex gap={2} alignItems={'center'}>
                             <Box height={'15px'}>
-                                <Image alt={'Hero Image'} fit={'contain'} align={'center'} w={'100%'} h={'100%'} src={'./email.svg'} />
+                                <Image alt={'Hero Image'} fit={'contain'} align={'center'} w={'100%'} h={'100%'} src={'./pencil.svg'} />
                             </Box>
                             <Heading as="h6" size="md" fontWeight={400}>
                                 Fill up the form
