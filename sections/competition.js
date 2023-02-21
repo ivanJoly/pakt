@@ -6,7 +6,7 @@ const PAKT_SERVICES = ['Comprehensive code audit', 'Protection of funds at risk 
 
 const IconCardCompetition = ({ image }) => {
     return (
-        <Box position={'relative'} overflow={'hidden'} borderRadius={4} display={'flex'} flexDirection={'column'} alignItems={'center'} justifyContent={'center'} padding={4}>
+        <Box position={'relative'} overflow={'hidden'} borderRadius={4} display={'flex'} flexDirection={'column'} alignItems={'center'} justifyContent={'center'} padding={4} zIndex={2}>
             <Box textAlign={'center'}>
                 <Box position={'relative'} height={'80px'} width={'full'} overflow={'hidden'}>
                     <Image alt={'Hero Image'} fit={'contain'} align={'center'} w={'100%'} h={'100%'} src={`./${image}.svg`} />
@@ -78,6 +78,18 @@ export default function Competition() {
                     <Box flex={'0 1 50%'} position={'relative'} transform={'translateY(50px)'}>
                         <GlassCard width={'150px'} height={'120px'} position={'absolute'} top={'-5%'} left={'30%'} transform={'translateX(-50%)'} zIndex={3}>
                             <IconCardCompetition image={'rack_server'} />
+                            <Box
+                                position={'absolute'}
+                                top={{ base: '5%', lg: '20%' }}
+                                left={{ base: '15%', lg: '30%' }}
+                                height={100}
+                                width={100}
+                                borderRadius={'50%'}
+                                filter={'blur(15px)'}
+                                background={'#0125D5'}
+                                zIndex={1}
+                                opacity={'0.65'}
+                            ></Box>
                         </GlassCard>
                         <GlassCard width={'full'} height={'full'} position={'relative'} zIndex={2}>
                             <Box padding={{ base: 8, lg: 12 }}>
@@ -106,6 +118,18 @@ export default function Competition() {
                                 </Stack>
                             </Box>
                         </GlassCard>
+                        <Box
+                            position={'absolute'}
+                            top={{ base: '5%', lg: '0%' }}
+                            left={{ base: '15%', lg: '15%' }}
+                            height={135}
+                            width={135}
+                            borderRadius={'50%'}
+                            filter={'blur(35px)'}
+                            background={'#126CE8'}
+                            zIndex={1}
+                            opacity={'0.65'}
+                        ></Box>
                     </Box>
                 </Flex>
             </Stack>
