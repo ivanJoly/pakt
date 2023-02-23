@@ -5,7 +5,7 @@ import EmailClipboard from '../components/emailClipboard';
 export default function Work() {
     return (
         <Container maxW="container.xl">
-            <Stack spacing={{ base: 8, md: 10 }} py={{ base: 20, md: 28 }}>
+            <Stack spacing={{ base: 8, md: 10 }} pt={{ base: 20, md: 28 }}>
                 <Box color={'brand.tertiary'} display={'flex'} gap={4}>
                     <Text as={'span'}>_WORK</Text>
                 </Box>
