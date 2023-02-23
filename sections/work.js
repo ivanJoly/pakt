@@ -35,46 +35,46 @@ export default function Work() {
                         gridArea={{ base: '2 / 1 / 3 / 12', md: '2 / 9 / 4 / 13', lg: '1 / 9 / 3 / 13', xl: '1 / 10 / 3 / 13' }}
                     >
                         <Box position={'relative'} height={'inherit'}>
-                            <GlassCard
-                                width={{ base: '80px', md: '150px' }}
-                                height={{ base: '80px', md: '120px' }}
+                            <Box
                                 position={'absolute'}
-                                top={{ base: '50%', md: '-5%' }}
+                                top={{ base: '50%', md: '-10%' }}
                                 left={{ base: '100%', md: '50%' }}
                                 transform={{ base: 'translate(-50%, -50%)', md: 'translateX(-50%)' }}
                                 zIndex={2}
                             >
-                                <Box
-                                    width={'inherit'}
-                                    height={'inherit'}
-                                    position={'relative'}
-                                    overflow={'hidden'}
-                                    borderRadius={4}
-                                    display={'flex'}
-                                    flexDirection={'column'}
-                                    alignItems={'center'}
-                                    justifyContent={'center'}
-                                    padding={4}
-                                >
-                                    <Box textAlign={'center'}>
-                                        <Box position={'relative'} zIndex={2} height={'80px'} width={'full'} overflow={'hidden'}>
-                                            <Image alt={'Hero Image'} fit={'contain'} align={'center'} w={'100%'} h={'100%'} src={'./flash-payment.svg'} />
-                                        </Box>
-                                    </Box>
+                                <GlassCard width={{ base: '80px', md: '150px' }} height={{ base: '80px', md: '120px' }} isOnHoverActive={true} transform={`rotate(15deg)`}>
                                     <Box
-                                        position={'absolute'}
-                                        top={{ base: '45%', lg: '45%' }}
-                                        left={{ base: '10%', lg: '5%' }}
-                                        height={'80px'}
-                                        width={'80px'}
-                                        borderRadius={'50%'}
-                                        filter={'blur(18px)'}
-                                        background={'#2E56FF'}
-                                        zIndex={0}
-                                        opacity={'0.8'}
-                                    ></Box>
-                                </Box>
-                            </GlassCard>
+                                        width={'inherit'}
+                                        height={'inherit'}
+                                        position={'relative'}
+                                        overflow={'hidden'}
+                                        borderRadius={4}
+                                        display={'flex'}
+                                        flexDirection={'column'}
+                                        alignItems={'center'}
+                                        justifyContent={'center'}
+                                        padding={4}
+                                    >
+                                        <Box textAlign={'center'}>
+                                            <Box position={'relative'} zIndex={2} height={'80px'} width={'full'} overflow={'hidden'}>
+                                                <Image alt={'Hero Image'} fit={'contain'} align={'center'} w={'100%'} h={'100%'} src={'./flash-payment.svg'} />
+                                            </Box>
+                                        </Box>
+                                        <Box
+                                            position={'absolute'}
+                                            top={{ base: '45%', lg: '45%' }}
+                                            left={{ base: '10%', lg: '5%' }}
+                                            height={'80px'}
+                                            width={'80px'}
+                                            borderRadius={'50%'}
+                                            filter={'blur(18px)'}
+                                            background={'#2E56FF'}
+                                            zIndex={0}
+                                            opacity={'0.8'}
+                                        ></Box>
+                                    </Box>
+                                </GlassCard>
+                            </Box>
                             <GlassCard width={'full'} height={'full'} padding={2}>
                                 <Flex
                                     width={'inherit'}
@@ -106,46 +106,47 @@ export default function Work() {
                         transform={{ base: '', md: 'translateY(-10px)' }}
                     >
                         <Box height={'inherit'} position={'relative'}>
-                            <GlassCard
-                                width={{ base: '80px', md: '150px' }}
-                                height={{ base: '80px', md: '120px' }}
+                            <Box
                                 position={'absolute'}
                                 top={{ base: '50%', md: '10%' }}
                                 left={{ base: '2%', md: '2%' }}
                                 transform={{ base: 'translate(-50%, -50%)', md: 'translateX(-50%)' }}
                                 zIndex={3}
                             >
-                                <Box
-                                    width={'inherit'}
-                                    height={'inherit'}
-                                    position={'relative'}
-                                    overflow={'hidden'}
-                                    borderRadius={4}
-                                    display={'flex'}
-                                    flexDirection={'column'}
-                                    alignItems={'center'}
-                                    justifyContent={'center'}
-                                    padding={4}
-                                >
-                                    <Box textAlign={'center'}>
-                                        <Box position={'relative'} height={'80px'} width={'full'} overflow={'hidden'} zIndex={2}>
-                                            <Image alt={'Hero Image'} fit={'contain'} align={'center'} w={'100%'} h={'100%'} src={'./axis-lock.svg'} />
+                                <GlassCard width={{ base: '80px', md: '150px' }} height={{ base: '80px', md: '120px' }} isOnHoverActive={true} transform={`rotate(-10deg)`}>
+                                    <Box
+                                        width={'inherit'}
+                                        height={'inherit'}
+                                        position={'relative'}
+                                        overflow={'hidden'}
+                                        borderRadius={4}
+                                        display={'flex'}
+                                        flexDirection={'column'}
+                                        alignItems={'center'}
+                                        justifyContent={'center'}
+                                        padding={4}
+                                    >
+                                        <Box textAlign={'center'}>
+                                            <Box position={'relative'} height={'80px'} width={'full'} overflow={'hidden'} zIndex={2}>
+                                                <Image alt={'Hero Image'} fit={'contain'} align={'center'} w={'100%'} h={'100%'} src={'./axis-lock.svg'} />
+                                            </Box>
                                         </Box>
                                     </Box>
-                                </Box>
-                                <Box
-                                    position={'absolute'}
-                                    top={{ base: '45%', lg: '25%' }}
-                                    left={{ base: '10%', lg: '25%' }}
-                                    height={'80px'}
-                                    width={'80px'}
-                                    borderRadius={'50%'}
-                                    filter={'blur(20px)'}
-                                    background={'#2E56FF'}
-                                    zIndex={0}
-                                    opacity={'0.95'}
-                                ></Box>
-                            </GlassCard>
+                                    <Box
+                                        position={'absolute'}
+                                        top={{ base: '45%', lg: '25%' }}
+                                        left={{ base: '10%', lg: '25%' }}
+                                        height={'80px'}
+                                        width={'80px'}
+                                        borderRadius={'50%'}
+                                        filter={'blur(20px)'}
+                                        background={'#2E56FF'}
+                                        zIndex={0}
+                                        opacity={'0.95'}
+                                    ></Box>
+                                </GlassCard>
+                            </Box>
+
                             <GlassCard width={'full'} height={'full'} position={'relative'} zIndex={2} padding={2}>
                                 <Flex direction={'row'} height={'inherit'} padding={4}>
                                     <Box flex={{ base: '0 1 50px', md: '0 1 25%' }}></Box>
@@ -176,58 +177,58 @@ export default function Work() {
                     </Box>
                     <Box width={'full'} height={{ base: '100%', md: '180px' }} gridArea={{ base: '4 / 1 / 5 / 12', md: '3 / 1 / 4 / 8', lg: '3 / 6 / 4 / 12', xl: '3 / 6 / 4 / 12' }}>
                         <Box height={'inherit'} position={'relative'}>
-                            <GlassCard
-                                width={{ base: '80px', md: '150px' }}
-                                height={{ base: '80px', md: '120px' }}
+                            <Box
                                 position={'absolute'}
                                 top={{ base: '50%', md: '10%' }}
                                 left={{ base: '100%', md: '95%' }}
                                 transform={{ base: 'translate(-50%, -50%)', md: 'translateX(-50%)' }}
                                 zIndex={3}
                             >
-                                <Box
-                                    width={'inherit'}
-                                    height={'inherit'}
-                                    position={'relative'}
-                                    overflow={'hidden'}
-                                    borderRadius={4}
-                                    display={'flex'}
-                                    flexDirection={'column'}
-                                    alignItems={'center'}
-                                    justifyContent={'center'}
-                                    padding={4}
-                                >
-                                    <Box textAlign={'center'}>
-                                        <Box position={'relative'} height={'80px'} width={'full'} overflow={'hidden'} zIndex={2}>
-                                            <Image alt={'Hero Image'} fit={'contain'} align={'center'} w={'100%'} h={'100%'} src={'./request-create.svg'} />
+                                <GlassCard width={{ base: '80px', md: '150px' }} height={{ base: '80px', md: '120px' }} isOnHoverActive={true} transform={`rotate(5deg)`}>
+                                    <Box
+                                        width={'inherit'}
+                                        height={'inherit'}
+                                        position={'relative'}
+                                        overflow={'hidden'}
+                                        borderRadius={4}
+                                        display={'flex'}
+                                        flexDirection={'column'}
+                                        alignItems={'center'}
+                                        justifyContent={'center'}
+                                        padding={4}
+                                    >
+                                        <Box textAlign={'center'}>
+                                            <Box position={'relative'} height={'80px'} width={'full'} overflow={'hidden'} zIndex={2}>
+                                                <Image alt={'Hero Image'} fit={'contain'} align={'center'} w={'100%'} h={'100%'} src={'./request-create.svg'} />
+                                            </Box>
                                         </Box>
                                     </Box>
-                                </Box>
-                                <Box
-                                    position={'absolute'}
-                                    top={{ base: '45%', lg: '15%' }}
-                                    left={{ base: '10%', lg: '25%' }}
-                                    height={'80px'}
-                                    width={'80px'}
-                                    borderRadius={'50%'}
-                                    filter={'blur(20px)'}
-                                    background={'#2E56FF'}
-                                    zIndex={0}
-                                    opacity={'0.95'}
-                                ></Box>
-                                <Box
-                                    position={'absolute'}
-                                    top={{ base: '45%', lg: '35%' }}
-                                    left={{ base: '10%', lg: '35%' }}
-                                    height={'80px'}
-                                    width={'80px'}
-                                    borderRadius={'50%'}
-                                    filter={'blur(20px)'}
-                                    background={'#A7F0B7'}
-                                    zIndex={0}
-                                    opacity={'0.35'}
-                                ></Box>
-                            </GlassCard>
+                                    <Box
+                                        position={'absolute'}
+                                        top={{ base: '45%', lg: '15%' }}
+                                        left={{ base: '10%', lg: '25%' }}
+                                        height={'80px'}
+                                        width={'80px'}
+                                        borderRadius={'50%'}
+                                        filter={'blur(20px)'}
+                                        background={'#2E56FF'}
+                                        zIndex={0}
+                                        opacity={'0.95'}
+                                    ></Box>
+                                    <Box
+                                        position={'absolute'}
+                                        top={{ base: '45%', lg: '35%' }}
+                                        left={{ base: '10%', lg: '35%' }}
+                                        height={'80px'}
+                                        width={'80px'}
+                                        borderRadius={'50%'}
+                                        filter={'blur(20px)'}
+                                        background={'#A7F0B7'}
+                                        zIndex={0}
+                                        opacity={'0.35'}
+                                    ></Box>
+                                </GlassCard>
+                            </Box>
                             <GlassCard width={'full'} height={'full'} position={'relative'} zIndex={2} padding={2}>
                                 <Flex direction={'row'} height={'inherit'} padding={4}>
                                     <Stack flex={'0 1 75%'} justifyContent={'center'}>
