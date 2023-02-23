@@ -50,8 +50,25 @@ const StackItem = ({ items, icon = 'X' }) => {
 };
 
 export default function Competition() {
+    const backgroundImageStyle = {
+        '@media screen and (min-width: 768px)': {
+            '-webkit-mask-image': 'radial-gradient(circle, rgb(0, 0, 0), transparent 70%)',
+        },
+    };
     return (
-        <Container maxW="container.xl">
+        <Container maxW="container.xl" position={'relative'}>
+            <Box
+                sx={backgroundImageStyle}
+                position={'absolute'}
+                width={'100%'}
+                maxW={'-webkit-fill-available'}
+                height={'1600px'}
+                backgroundImage={'./competition_background.png'}
+                backgroundPosition={'right'}
+                backgroundRepeat={'no-repeat'}
+                backgroundSize={'cover'}
+                marginLeft={'-15px'}
+            ></Box>
             <Stack spacing={{ base: 8, md: 10 }} py={{ base: 20, md: 28 }}>
                 {/* SECTION HEADER */}
                 <Box color={'brand.tertiary'} display={'flex'} gap={4}>

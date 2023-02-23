@@ -198,9 +198,25 @@ const MiscBackgroundSecurity = () => {
 };
 
 export default function Hero() {
+    const backgroundImageStyle = {
+        '@media screen and (min-width: 768px)': {
+            '-webkit-mask-image': 'radial-gradient(circle, rgb(0, 0, 0), transparent 85%)',
+        },
+    };
     return (
         <Box width={'100%'}>
-            <Container maxW="container.xl" backgroundImage={'./hero_background.png'} backgroundPosition={'right'} backgroundRepeat={'no-repeat'} backgroundSize={'cover'}>
+            <Container maxW="container.xl" position={'relative'}>
+                <Box
+                    sx={backgroundImageStyle}
+                    position={'absolute'}
+                    width={'-webkit-fill-available'}
+                    height={'full'}
+                    backgroundImage={'./hero_background.png'}
+                    backgroundPosition={'right'}
+                    backgroundRepeat={'no-repeat'}
+                    backgroundSize={'cover'}
+                    marginLeft={'-15px'}
+                ></Box>
                 {/* TOP SECTION */}
                 <Stack spacing={{ base: 8, md: 10 }} py={{ base: 20, md: 28 }}>
                     <Stack direction={{ base: 'column', md: 'row' }} gap={{ base: 8, md: 0 }}>

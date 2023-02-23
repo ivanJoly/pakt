@@ -126,8 +126,26 @@ export const ContactForm = () => {
 };
 
 export default function ContactUs() {
+    const backgroundImageStyle = {
+        '@media screen and (min-width: 768px)': {
+            '-webkit-mask-image': 'radial-gradient(circle, rgb(0, 0, 0), transparent 70%)',
+        },
+    };
     return (
-        <Container id="contact-form" maxW="container.xl" py={{ base: 20, md: 28 }}>
+        <Container id="contact-form" maxW="container.xl" py={{ base: 20, md: 28 }} position={'relative'}>
+            <Box
+                sx={backgroundImageStyle}
+                position={'absolute'}
+                top={'45%'}
+                marginLeft={'-20px'}
+                width={'100%'}
+                maxW={'-webkit-fill-available'}
+                height={'1200px'}
+                backgroundImage={'./contact_background.png'}
+                backgroundPosition={'left'}
+                backgroundRepeat={'no-repeat'}
+                backgroundSize={'cover'}
+            ></Box>
             <Stack spacing={{ base: 8, md: 10 }} py={{ base: 16 }}>
                 <Box color={'brand.tertiary'} display={'flex'} gap={4}>
                     <Text as={'span'}>_REACH OUT</Text>
