@@ -83,7 +83,7 @@ const LottieControl = ({ scroll }) => {
 const Item = ({ number, subtitle, description }) => {
     const isFirst = number == 1;
     const isLast = number == ITEMS.length;
-    console.log(isLast);
+
     return (
         <Flex
             width={'full'}
@@ -185,7 +185,7 @@ export default function How() {
                     pointerEvents={'none'}
                     zIndex={3}
                 ></Box>
-                <Box width={{ base: 'full', md: '50%' }} height={{ base: '250px', md: 'full' }} position={{ base: 'relative', md: 'absolute' }}>
+                <Box width={{ base: 'full', md: '50%' }} height={{ base: '250px', md: 'full' }} position={{ base: 'relative', md: 'absolute' }} pointerEvents={'none'}>
                     <LottieControl scroll={scroll} />
                 </Box>
                 <Flex
