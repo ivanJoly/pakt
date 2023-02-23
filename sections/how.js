@@ -83,9 +83,15 @@ const LottieControl = ({ scroll }) => {
 const Item = ({ number, subtitle, description }) => {
     const isFirst = number == 1;
     const isLast = number == ITEMS.length;
-
+    console.log(isLast);
     return (
-        <Flex width={'full'} marginTop={{ base: 0, md: isFirst ? 20 : 0 }} marginLeft={{ base: isFirst ? 8 : 0, md: 0 }} minW={{ base: '250px', md: 'unset' }}>
+        <Flex
+            width={'full'}
+            marginTop={{ base: 0, md: isFirst ? 20 : 0 }}
+            marginLeft={{ base: isFirst ? 8 : 0, md: 0 }}
+            minW={{ base: '250px', md: 'unset' }}
+            marginRight={{ base: isLast ? '50px !important' : 0, sm: 'unset' }}
+        >
             <Box flex={'0'} marginRight={'10px'} minW={{ base: 'unset', md: '50px' }}>
                 <Box position={'relative'} display={{ base: 'none', md: 'block' }} width={' 14px'} height={' 14px'} background={'#8bc89a'} borderRadius={'50%'} marginTop={' 6px'}>
                     <Box position={'absolute'} width={'45px'} height={'4px'} left={0} top={'50%'} transform={'translateY(-50%)'} background={'#8bc89a'}></Box>
