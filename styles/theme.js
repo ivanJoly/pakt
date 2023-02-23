@@ -77,6 +77,7 @@ export const theme = extendTheme({
             'html, body': {
                 background: props.theme.colors.main.background,
                 color: 'white',
+                'scroll-behavior': 'smooth',
             },
         }),
     },
